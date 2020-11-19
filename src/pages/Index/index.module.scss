@@ -1,81 +1,91 @@
 .home_wrap {
-    display: flex;
-    background: rgba(0, 0, 0, 0);
-    height: 100vh;
-    justify-items: center;
-    justify-content: center;
+  display: flex;
+  background: rgba(0, 0, 0, 0);
+  height: 100vh;
+  justify-items: center;
+  justify-content: center;
 }
 
 .home_bg {
-    @keyframes heartbeat
-    {
-        0%   {
-            width: 100%;
-            height: 100%;
-        }
-        50%  {
-            width: 105%;
-            height: 105%;
-        }
-        100% {
-            width: 100%;
-            height: 100%;
-        }
+  @keyframes heartbeat {
+    0% {
+      width: 100%;
+      height: 100%;
     }
+    50% {
+      width: 105%;
+      height: 105%;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+    }
+  }
 
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    background: radial-gradient(circle, #0B0B0B 29%, #111111 56%, #121212 58%, #080808 63%, #0B0B0B 66%, #0F0F0F 68%, #111111 70%, #171717 74%, #2D2D2D 76%, #000000 80%);
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: radial-gradient(
+    circle,
+    #0b0b0b 29%,
+    #111111 56%,
+    #121212 58%,
+    #080808 63%,
+    #0b0b0b 66%,
+    #0f0f0f 68%,
+    #111111 70%,
+    #171717 74%,
+    #2d2d2d 76%,
+    #000000 80%
+  );
 
-    animation: heartbeat 1s infinite cubic-bezier(0.215, 0.610, 0.355, 1)
+  animation: heartbeat 1s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .home_logo {
-
 }
 
 .home_content {
-    position: fixed;
-    width: 40%;
-    height: 40%;
-    top: 30%;
+  position: fixed;
+  width: 40%;
+  height: 40%;
+  top: 30%;
 }
 
 .home_title {
-    font-family: PTMono-Regular;
-    font-size: 3rem;
-    color: rgba(50,254,219,0.93);
-    letter-spacing: 0.38px;
-    text-align: center;
-    padding-top: 3.9%;
-    margin: 0 auto;
+  font-family: PTMono-Regular;
+  font-size: 3rem;
+  color: rgba(50, 254, 219, 0.93);
+  letter-spacing: 0.38px;
+  text-align: center;
+  padding-top: 3.9%;
+  margin: 0 auto;
 }
 
 .home_intro {
-    position: fixed;
-    bottom: 8%;
-    left: 4%;
-    width: 30rem;
-    opacity: 0.92;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
-    color: rgba(255,255,255,0.93);
-    letter-spacing: -0.45px;
+  position: fixed;
+  bottom: 8%;
+  left: 4%;
+  width: 30rem;
+  opacity: 0.92;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.93);
+  letter-spacing: -0.45px;
 }
 
 .home_nav {
-    position: fixed;
-    right: 5%;
-    top: 40%;
+  position: fixed;
+  right: 5%;
+  top: 40%;
 
-    &_item {
-        opacity: 0.65;
-        font-family: PTMono-Regular;
-        font-size: 22px;
-        color: rgba(255,255,255,0.93);
-        letter-spacing: -0.45px;
-        text-align: center;
-    }
+  &_item {
+    opacity: 0.65;
+    font-family: PTMono-Regular;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.93);
+    letter-spacing: -0.45px;
+    text-align: center;
+  }
 }

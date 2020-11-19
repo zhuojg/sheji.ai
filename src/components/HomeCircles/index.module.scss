@@ -1,71 +1,236 @@
 .circle_wrap {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .circle_teaching {
-    position: absolute;
-    left: 10%;
-    top: 0;
-    width: 10vw;
-    height: 10vw;
-    background-color: rgba(0, 0, 0, 0);
+  @keyframes movement_teaching {
+    0% {
+      left: 12%;
+      top: 5%;
+    }
+
+    25% {
+      left: 14%;
+      top: 3%;
+    }
+
+    50% {
+      left: 13%;
+      top: 6%;
+    }
+
+    75% {
+      left: 15%;
+      top: 2%;
+    }
+
+    100% {
+      left: 12%;
+      top: 5%;
+    }
+  }
+
+  position: absolute;
+  left: 10%;
+  top: 0;
+  width: 10vw;
+  height: 10vw;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+
+  &_small {
+    @keyframes movement_teaching_small {
+      0% {
+        left: 50%;
+        top: 50%;
+      }
+
+      25% {
+        left: 45%;
+        top: 55%;
+      }
+
+      50% {
+        left: 43%;
+        top: 57%;
+      }
+
+      75% {
+        left: 48%;
+        top: 55%;
+      }
+
+      100% {
+        left: 50%;
+        top: 50%;
+      }
+    }
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
     border-radius: 50%;
     border: 3px solid #ffffff;
 
-    &_small {
-        position: relative;
-        left: 50%;
-        top: 50%;
-        width: 24px;
-        height: 24px;
-        background-color: #ffffff;
-        border-radius: 50%;
-        border: 3px solid #ffffff;
-    }
+    animation: movement_teaching_small 2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  animation: movement_teaching 2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .circle_projects {
-    position: absolute;
-    right: 0;
-    top: 12%;
-    width: 20vw;
-    height: 20vw;
-    background-color: rgba(0, 0, 0, 0);
+  @keyframes movement_projects {
+    0% {
+      right: 0;
+      top: 12%;
+    }
+
+    25% {
+      right: 7%;
+      top: 9%;
+    }
+
+    50% {
+      right: 10%;
+      top: 14%;
+    }
+
+    75% {
+      right: 5%;
+      top: 16%;
+    }
+
+    100% {
+      right: 0;
+      top: 12%;
+    }
+  }
+
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+
+  &_small {
+    @keyframes movement_projects_small {
+      0% {
+        left: 23%;
+        top: 45%;
+      }
+
+      25% {
+        left: 32%;
+        top: 32%;
+      }
+
+      50% {
+        left: 43%;
+        top: 40%;
+      }
+
+      75% {
+        left: 50%;
+        top: 50%;
+      }
+
+      100% {
+        left: 23%;
+        top: 45%;
+      }
+    }
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
     border-radius: 50%;
     border: 3px solid #ffffff;
 
-    &_small {
-        position: relative;
-        left: 50%;
-        top: 50%;
-        width: 24px;
-        height: 24px;
-        background-color: #ffffff;
-        border-radius: 50%;
-        border: 3px solid #ffffff;
-    }
+    animation: movement_projects_small 2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  animation: movement_projects 2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .circle_news {
-    position: absolute;
-    left:0;
-    top: 60%;
-    width: 14vw;
-    height: 14vw;
-    background-color: rgba(0, 0, 0, 0);
+  @keyframes movement_news {
+    0% {
+      left: 0;
+      top: 60%;
+    }
+
+    25% {
+      left: 2%;
+      top: 67%;
+    }
+
+    50% {
+      left: 4%;
+      top: 66%;
+    }
+
+    75% {
+      left: 3%;
+      top: 57%;
+    }
+
+    100% {
+      left: 0;
+      top: 60%;
+    }
+  }
+
+  position: absolute;
+  width: 14vw;
+  height: 14vw;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+
+  &_small {
+    @keyframes movement_news_small {
+      0% {
+        left: 65%;
+        top: 67%;
+      }
+
+      25% {
+        left: 60%;
+        top: 60%;
+      }
+
+      50% {
+        left: 57%;
+        top: 63%;
+      }
+
+      75% {
+        left: 50%;
+        top: 58%;
+      }
+
+      100% {
+        left: 65%;
+        top: 67%;
+      }
+    }
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
     border-radius: 50%;
     border: 3px solid #ffffff;
 
-    &_small {
-        position: relative;
-        left: 50%;
-        top: 50%;
-        width: 24px;
-        height: 24px;
-        background-color: #ffffff;
-        border-radius: 50%;
-        border: 3px solid #ffffff;
-    }
+    animation: movement_news_small 2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  animation: movement_news 2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
 }
