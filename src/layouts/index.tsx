@@ -15,7 +15,7 @@ const PageLayout = () => {
       <Router>
         <Layout className={styles.layout}>
           <Header className={styles.header}>
-            <Menu mode="horizontal" theme="dark" selectedKeys={[selectedMenu]} onClick={(event) => {
+            <Menu mode="horizontal" selectedKeys={[selectedMenu]} onClick={(event) => {
                 // console.log(event.key)
                 setSelectedMenu(event.key.toString())
             }}>

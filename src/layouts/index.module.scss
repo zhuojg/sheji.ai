@@ -1,21 +1,36 @@
 .layout {
-    background: #000000;
+  background: #000000;
 }
 
 .footer {
-    padding: 3rem;
-    background: #000000;
+  padding: 3rem;
+  background: #000000;
 
-    color: #EAEAEA;
+  color: #eaeaea;
 }
 
 .content {
-    margin: 3rem;
-    background: #000000;
+  margin: 3rem;
+  background: #000000;
 
-    color: #fafafa;
+  color: #fafafa;
 }
 
 .header {
-    background: #ffffff;
+  background: #222222;
+
+  :global {
+    .ant-menu-item a {
+      color: #ffffff;
+    }
+
+    .ant-menu {
+      background: #222222;
+      color: #ffffff;
+
+      &-horizontal {
+        border-bottom: 0;
+      }
+    }
+  }
 }

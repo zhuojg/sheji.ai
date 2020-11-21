@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
+import './index.less'
 import Index from './pages/Index'
 import Layout from './layouts'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
