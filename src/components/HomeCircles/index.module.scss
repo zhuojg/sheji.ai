@@ -75,10 +75,12 @@
     border-radius: 50%;
     border: 3px solid #ffffff;
 
-    animation: movement_teaching_small 2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+    // animation: movement_teaching_small 2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: movement_teaching_small 2s infinite linear;
   }
 
-  animation: movement_teaching 2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+//   animation: movement_teaching 2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: movement_projects 2s infinite linear;
 }
 
 .circle_projects {
@@ -152,10 +154,12 @@
     border-radius: 50%;
     border: 3px solid #ffffff;
 
-    animation: movement_projects_small 2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+    // animation: movement_projects_small 2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: movement_projects_small 2s infinite linear;
   }
 
-  animation: movement_projects 2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+//   animation: movement_projects 2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+animation: movement_projects 2s infinite linear;
 }
 
 .circle_news {
@@ -229,8 +233,10 @@
     border-radius: 50%;
     border: 3px solid #ffffff;
 
-    animation: movement_news_small 2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+    // animation: movement_news_small 2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: movement_news_small 2s infinite linear;
   }
 
-  animation: movement_news 2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+//   animation: movement_news 2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation: movement_news 2s infinite linear;
 }

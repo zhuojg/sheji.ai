@@ -1,3 +1,5 @@
+@import '../../theme.less';
+
 .home_wrap {
   display: flex;
   background: rgba(0, 0, 0, 0);
@@ -22,7 +24,6 @@
     }
   }
 
-  z-index: -1;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -56,11 +57,12 @@
 .home_title {
   font-family: PTMono-Regular;
   font-size: 3rem;
-  color: rgba(50, 254, 219, 0.93);
+  color: @primary-color;
   letter-spacing: 0.38px;
   text-align: center;
   padding-top: 3.9%;
   margin: 0 auto;
+  z-index: 0;
 }
 
 .home_intro {
