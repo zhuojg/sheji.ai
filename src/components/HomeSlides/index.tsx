@@ -5,10 +5,11 @@ import classnames from 'classnames'
 
 interface HomeSlidesProps {
   selected: number
+  hover: boolean
 }
 
 const HomeSlides = (props: HomeSlidesProps) => {
-  const { selected } = props
+  const { selected, hover } = props
 
   return (
     <div
@@ -27,7 +28,7 @@ const HomeSlides = (props: HomeSlidesProps) => {
             className={classnames({
               [styles.home_slide_item]: true,
               [styles.home_slide_news]: true,
-              [styles.home_slide_news_hover]: selected === 0
+              [styles.home_slide_news_hover]: selected === 0 && hover
             })}
           ></div>
         </Col>
@@ -36,7 +37,7 @@ const HomeSlides = (props: HomeSlidesProps) => {
             className={classnames({
               [styles.home_slide_item]: true,
               [styles.home_slide_projects]: true,
-              [styles.home_slide_projects_hover]: selected === 1
+              [styles.home_slide_projects_hover]: selected === 1 && hover
             })}
           ></div>
         </Col>
@@ -45,7 +46,7 @@ const HomeSlides = (props: HomeSlidesProps) => {
             className={classnames({
               [styles.home_slide_item]: true,
               [styles.home_slide_teaching]: true,
-              [styles.home_slide_teaching_hover]: selected === 2
+              [styles.home_slide_teaching_hover]: selected === 2 && hover
             })}
           ></div>
         </Col>
@@ -54,7 +55,7 @@ const HomeSlides = (props: HomeSlidesProps) => {
             className={classnames({
               [styles.home_slide_item]: true,
               [styles.home_slide_about]: true,
-              [styles.home_slide_about_hover]: selected === 3
+              [styles.home_slide_about_hover]: selected === 3 && hover
             })}
           ></div>
         </Col>
@@ -63,7 +64,7 @@ const HomeSlides = (props: HomeSlidesProps) => {
             className={classnames({
               [styles.home_slide_item]: true,
               [styles.home_slide_join]: true,
-              [styles.home_slide_join_hover]: selected === 4
+              [styles.home_slide_join_hover]: selected === 4 && hover
             })}
           ></div>
         </Col>

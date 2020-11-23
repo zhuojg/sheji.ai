@@ -5,3 +5,26 @@ export const CATEGORY_ID: { [key: string]: number } = {
   teaching: 3,
   projects: 4
 }
+
+export const NAV_MENU = [
+  {
+    name: 'News',
+    link: '/news'
+  },
+  {
+    name: 'Projects',
+    link: '/projects'
+  },
+  {
+    name: 'Teaching',
+    link: '/teaching'
+  },
+  {
+    name: 'About Us',
+    link: '/about'
+  },
+  {
+    name: 'Join Us',
+    link: '/join'
+  }
+]
