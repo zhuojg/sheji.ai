@@ -1,93 +1,68 @@
 @import '../../theme.less';
 
 .home_wrap {
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  background: rgba(0, 0, 0, 0);
+  flex-direction: column;
+  background: rgba(0, 0, 0);
   height: 100vh;
+  width: 100vw;
   justify-items: center;
   justify-content: center;
+  color: #ffffff;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-.home_bg {
-  @keyframes heartbeat {
-    0% {
-      width: 100%;
-      height: 100%;
-    }
-    50% {
-      width: 105%;
-      height: 105%;
-    }
-    100% {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  background: radial-gradient(
-    circle,
-    #0b0b0b 29%,
-    #111111 56%,
-    #121212 58%,
-    #080808 63%,
-    #0b0b0b 66%,
-    #0f0f0f 68%,
-    #111111 70%,
-    #171717 74%,
-    #2d2d2d 76%,
-    #000000 80%
-  );
-
-  animation: heartbeat 1s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+.home_header {
+  height: 8rem;
+  padding: 2rem;
+  padding-left: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.home_logo {
+.home_logo img {
+  height: 4rem;
 }
 
 .home_content {
-  position: fixed;
-  width: 40%;
-  height: 40%;
-  top: 30%;
-}
-
-.home_title {
-  font-family: PTMono-Regular;
-  font-size: 3rem;
-  color: @primary-color;
-  letter-spacing: 0.38px;
-  text-align: center;
-  padding-top: 3.9%;
+  display: flex;
+  flex-direction: column;
+  width: 1024px;
+  height: (100vh - 16rem);
   margin: 0 auto;
-  z-index: 0;
-}
-
-.home_intro {
-  position: fixed;
-  bottom: 8%;
-  left: 4%;
-  width: 30rem;
-  opacity: 0.92;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 22px;
-  color: rgba(255, 255, 255, 0.93);
-  letter-spacing: -0.45px;
 }
 
 .home_nav {
-  position: fixed;
-  right: 5%;
-  top: 40%;
-
+  z-index: 1;
+  position: relative;
   &_item {
-    opacity: 0.65;
-    font-family: PTMono-Regular;
-    font-size: 22px;
-    color: rgba(255, 255, 255, 0.93);
-    letter-spacing: -0.45px;
-    text-align: center;
+    margin: 1.5rem 0;
+    transition: text-stroke 0.1s;
+    font-size: 6rem;
+    color: #ffffff;
+
+    &:hover {
+      color: #000000;
+      text-stroke: 1px #ffffff;
+      -webkit-text-stroke: 1px #ffffff;
+    }
   }
+}
+
+.home_intro {
+  color: #ffffff;
+
+  &_title {
+  }
+
+  &_content {
+  }
+}
+
+.home_info {
+  height: 8rem;
+  color: #ffffff;
 }

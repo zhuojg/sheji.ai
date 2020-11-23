@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="450px" height="234px" viewBox="0 0 450 234" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="93.7568531%" y1="29.7815193%" x2="11.2493147%" y2="58.2143261%" id="linearGradient-1">
+            <stop stop-color="#EEEEEE" stop-opacity="0.3" offset="0%"></stop>
+            <stop stop-color="#171717" stop-opacity="0.155430507" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-1017.000000, -117.000000)">
+            <g id="5" transform="translate(1014.000000, 117.000000)">
+                <ellipse id="椭圆形" fill="url(#linearGradient-1)" cx="162.5" cy="117" rx="117.5" ry="117"></ellipse>
+                <ellipse id="椭圆形" fill="url(#linearGradient-1)" transform="translate(335.500000, 117.000000) scale(-1, 1) translate(-335.500000, -117.000000) " cx="335.5" cy="117" rx="117.5" ry="117"></ellipse>
+                <text id="Designer." font-family="FZLTZHK--GBK1-0, FZLanTingHei-DB-GBK" font-size="20" font-weight="normal" letter-spacing="0.21388875" fill="#FFFFFF" fill-opacity="0.93">
+                    <tspan x="1.89687563" y="116">Designer.</tspan>
+                </text>
+                <text id="Creativity." font-family="FZLTZHK--GBK1-0, FZLanTingHei-DB-GBK" font-size="20" font-weight="normal" letter-spacing="0.21388875" fill="#FFFFFF" fill-opacity="0.93">
+                    <tspan x="198.448612" y="116">Creativity.</tspan>
+                </text>
+                <text id="AI." font-family="FZLTZHK--GBK1-0, FZLanTingHei-DB-GBK" font-size="20" font-weight="normal" letter-spacing="0.21388875" fill="#FFFFFF" fill-opacity="0.93">
+                    <tspan x="408.601042" y="116">AI.</tspan>
+                </text>
+                <path id="路径-9" d="M176.05609,108 L169.719713,104.435788 L170.209974,103.564212 L178.984708,108.5 L170.209974,113.435788 L169.719713,112.564212 L176.05609,109 L113.542969,109 L113.542969,108 L176.05609,108 Z" fill="#979797" fill-rule="nonzero"></path>
+                <path id="路径-9备份" d="M371.513122,108 L365.176744,104.435788 L365.667006,103.564212 L374.441739,108.5 L365.667006,113.435788 L365.176744,112.564212 L371.513122,109 L309,109 L309,108 L371.513122,108 Z" fill="#979797" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

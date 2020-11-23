@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="226px" height="254px" viewBox="0 0 226 254" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="84.5494969%" y1="83.2941417%" x2="-7.41706255%" y2="26.4905531%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.3" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.386172421" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="84.5494969%" y1="83.2941417%" x2="-7.41706255%" y2="26.4905531%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0.301955857" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.386172421" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板备份-3" transform="translate(-201.000000, -95.000000)">
+            <g id="2" transform="translate(202.000000, 96.000000)">
+                <circle id="椭圆形" stroke-opacity="0.6" stroke="#979797" stroke-width="2" fill="url(#linearGradient-1)" cx="70" cy="70" r="70"></circle>
+                <circle id="椭圆形备份-2" stroke-opacity="0.6" stroke="#979797" stroke-width="2" fill="url(#linearGradient-1)" transform="translate(70.000000, 182.000000) scale(1, -1) translate(-70.000000, -182.000000) " cx="70" cy="182" r="70"></circle>
+                <circle id="椭圆形备份" stroke-opacity="0.6" stroke="#979797" stroke-width="2" fill="url(#linearGradient-2)" transform="translate(154.000000, 70.000000) scale(-1, 1) translate(-154.000000, -70.000000) " cx="154" cy="70" r="70"></circle>
+                <circle id="椭圆形备份-3" stroke-opacity="0.6" stroke="#979797" fill="url(#linearGradient-1)" transform="translate(154.000000, 182.000000) scale(-1, -1) translate(-154.000000, -182.000000) " cx="154" cy="182" r="70"></circle>
+                <text id="C" font-family="FZLTZHK--GBK1-0, FZLanTingHei-DB-GBK" font-size="20" font-weight="normal" letter-spacing="0.21388875" fill="#FFFFFF" fill-opacity="0.93">
+                    <tspan x="21.4555556" y="47">C</tspan>
+                </text>
+                <text id="H" font-family="FZLTZHK--GBK1-0, FZLanTingHei-DB-GBK" font-size="20" font-weight="normal" letter-spacing="0.21388875" fill="#FFFFFF" fill-opacity="0.93">
+                    <tspan x="21.4946181" y="223">H</tspan>
+                </text>
+                <text id="T" font-family="FZLTZHK--GBK1-0, FZLanTingHei-DB-GBK" font-size="20" font-weight="normal" letter-spacing="0.21388875" fill="#FFFFFF" fill-opacity="0.93">
+                    <tspan x="188.666493" y="47">T</tspan>
+                </text>
+                <text id="S" font-family="FZLTZHK--GBK1-0, FZLanTingHei-DB-GBK" font-size="20" font-weight="normal" letter-spacing="0.21388875" fill="#FFFFFF" fill-opacity="0.93">
+                    <tspan x="188.080556" y="223">S</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

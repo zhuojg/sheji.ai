@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="291px" height="269px" viewBox="0 0 291 269" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="84.5494969%" y1="83.2941417%" x2="-7.41706255%" y2="26.4905531%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.4" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.386172421" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.893368676">
+        <g id="画板备份-4" transform="translate(-153.000000, -99.000000)">
+            <g id="4" transform="translate(107.000000, 101.000000)">
+                <circle id="椭圆形" stroke-opacity="0.457222465" stroke="#FFFFFF" stroke-width="3" cx="192.5" cy="132.5" r="132.5"></circle>
+                <g id="编组-3" transform="translate(81.000000, 81.000000)">
+                    <g id="编组-2" transform="translate(25.000000, 0.000000)">
+                        <circle id="椭圆形" stroke-opacity="0.6" stroke="#979797" stroke-width="2" fill="url(#linearGradient-1)" cx="53" cy="53" r="53"></circle>
+                        <circle id="椭圆形备份" stroke-opacity="0.6" stroke="#979797" stroke-width="2" fill="url(#linearGradient-1)" transform="translate(120.000000, 53.000000) scale(-1, 1) translate(-120.000000, -53.000000) " cx="120" cy="53" r="53"></circle>
+                        <text id="Local" font-family="FZLTZHK--GBK1-0, FZLanTingHei-DB-GBK" font-size="14" font-weight="normal" letter-spacing="0.149722125" fill="#FFFFFF" fill-opacity="0.93">
+                            <tspan x="12.1374134" y="58">Local</tspan>
+                        </text>
+                        <text id="Design" transform="translate(86.000000, 53.000000) rotate(90.000000) translate(-86.000000, -53.000000) " font-family="FZLTZHK--GBK1-0, FZLanTingHei-DB-GBK" font-size="14" font-weight="normal" letter-spacing="0.149722125" fill="#FFFFFF" fill-opacity="0.93">
+                            <tspan x="59.6016149" y="57.5">Design</tspan>
+                        </text>
+                        <text id="Cloud" font-family="FZLTZHK--GBK1-0, FZLanTingHei-DB-GBK" font-size="14" font-weight="normal" letter-spacing="0.149722125" fill="#FFFFFF" fill-opacity="0.93">
+                            <tspan x="117.524132" y="58">Cloud</tspan>
+                        </text>
+                    </g>
+                    <text id="Experience" transform="translate(8.500000, 50.000000) rotate(90.000000) translate(-8.500000, -50.000000) " font-family="FZLTZHK--GBK1-0, FZLanTingHei-DB-GBK" font-size="14" font-weight="normal" letter-spacing="0.149722125" fill="#FFFFFF" fill-opacity="0.93">
+                        <tspan x="-34.4400169" y="54.5">Experience</tspan>
+                    </text>
+                    <text id="Data" transform="translate(214.500000, 50.000000) rotate(90.000000) translate(-214.500000, -50.000000) " font-family="FZLTZHK--GBK1-0, FZLanTingHei-DB-GBK" font-size="14" font-weight="normal" letter-spacing="0.149722125" fill="#FFFFFF" fill-opacity="0.93">
+                        <tspan x="196.618525" y="54.5">Data</tspan>
+                    </text>
+                </g>
+                <text id="1" font-family="FZLTZHK--GBK1-0, FZLanTingHei-DB-GBK" font-size="16" font-weight="normal" letter-spacing="0.171111" fill="#FFFFFF" fill-opacity="0.93">
+                    <tspan x="45.0394445" y="15">1</tspan>
+                </text>
+                <path id="路径-11" d="M57.9725356,34 L327.527464,34 C327.776187,31.7500248 329.683723,30 332,30 C334.485281,30 336.5,32.0147186 336.5,34.5 C336.5,36.9852814 334.485281,39 332,39 C329.683723,39 327.776187,37.2499752 327.527464,35 L57.9725356,35 C57.7238135,37.2499752 55.8162768,39 53.5,39 C51.0147186,39 49,36.9852814 49,34.5 C49,32.0147186 51.0147186,30 53.5,30 C55.8162768,30 57.7238135,31.7500248 57.9725356,34 Z" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

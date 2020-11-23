@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="335px" height="240px" viewBox="0 0 335 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="9.26305259%" y1="69.145396%" x2="100%" y2="24.3340088%" id="linearGradient-1">
+            <stop stop-color="#000000" stop-opacity="0.0725524476" offset="0%"></stop>
+            <stop stop-color="#E3E3E3" stop-opacity="0.413707386" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="71.2673611%" y1="0%" x2="26.2896825%" y2="81.6964286%" id="linearGradient-2">
+            <stop stop-color="#EEEEEE" offset="0%"></stop>
+            <stop stop-color="#424141" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板备份-5" transform="translate(-122.000000, -112.000000)">
+            <g id="1" transform="translate(122.000000, 112.000000)">
+                <g id="teaching-">
+                    <rect id="矩形" fill="url(#linearGradient-1)" x="0" y="0" width="334.978723" height="240"></rect>
+                    <circle id="椭圆形" fill="url(#linearGradient-2)" cx="85.2765957" cy="121.021277" r="32.1702128"></circle>
+                    <text id="Data-set" font-family="FZLTZHK--GBK1-0, FZLanTingHei-DB-GBK" font-size="20" font-weight="normal" letter-spacing="0.21388875" fill="#FFFFFF" fill-opacity="0.93">
+                        <tspan x="187.383308" y="228.62766">Data set</tspan>
+                    </text>
+                    <text id="Aa" font-family="Helvetica" font-size="50" font-weight="normal" letter-spacing="0.534721875" fill="#FFFFFF" fill-opacity="0.93">
+                        <tspan x="88.3760265" y="62.9148936">Aa</tspan>
+                    </text>
+                    <path d="M297.594415,40.2087766 L205.27859,60.8617021" id="路径-8" stroke-opacity="0.481424825" stroke="#979797" stroke-width="3"></path>
+                    <path d="M122.553191,201.494681 C140.138992,202.120506 160.936199,191.400426 184.944814,169.334441 C213.319149,143.255984 217.216718,106.23383 244.723404,75.8098404 C259.957447,58.9601064 277.581117,47.0930851 297.594415,40.2087766" id="路径-6" stroke="#FFFFFF" stroke-width="2"></path>
+                    <path d="M258.785904,186.893617 L122.553191,201.520571" id="路径-8备份" stroke-opacity="0.481424825" stroke="#979797" stroke-width="3"></path>
+                    <circle id="椭圆形" fill="#EBEBEB" cx="203.744681" cy="61.787234" r="4.59574468"></circle>
+                    <circle id="椭圆形备份" fill="#EBEBEB" cx="262.978723" cy="186.382979" r="4.59574468"></circle>
+                    <circle id="椭圆形备份-2" stroke="#979797" fill="#D8D8D8" cx="122.042553" cy="201.702128" r="4.59574468"></circle>
+                </g>
+                <polyline id="路径-7" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="284.345745 39.1875 302.397606 37.6166888 288.545545 49.5299202"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

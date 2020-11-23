@@ -1,0 +1,109 @@
+.home_slide {
+  width: 350%;
+  position: absolute;
+  top: 24rem;
+  left: 0;
+  z-index: -1;
+  transition: all 0.1s ease-in-out;
+
+  &_item {
+    height: 20rem;
+    width: 100%;
+    transition: all 0.1s ease-in-out;
+
+    &_move {
+      margin-left: 300px;
+    }
+  }
+
+  &_news {
+    background: url('../../assets/menu-item/news.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    
+
+    &_hover {
+      background: url('../../assets/menu-item-hover/news.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  &_projects {
+    background: url('../../assets/menu-item/projects.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    &_hover {
+      background: url('../../assets/menu-item-hover/projects.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  &_teaching {
+    background: url('../../assets/menu-item/teaching.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    &_hover {
+      background: url('../../assets/menu-item-hover/teaching.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  &_about {
+    background: url('../../assets/menu-item/about.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    &_hover {
+      background: url('../../assets/menu-item-hover/about.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  &_join {
+    background: url('../../assets/menu-item/join.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    &_hover {
+      background: url('../../assets/menu-item-hover/join.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+}
+
+.offset_0 {
+  transform: translateX(0);
+}
+
+.offset_1 {
+  transform: translateX(-16.67%);
+}
+
+.offset_2 {
+  transform: translateX(-33.33%);
+}
+
+.offset_3 {
+  transform: translateX(-50%);
+} 
+
+.offset_4 {
+  transform: translateX(-66.67%);
+}
