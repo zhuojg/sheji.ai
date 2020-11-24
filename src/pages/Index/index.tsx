@@ -12,9 +12,13 @@ const Index = () => {
 
   return (
     <div className={styles.home_wrap}>
-      <div className={styles.home_bg}>
-      </div>
-      <div className={styles.home_header}>
+      <div className={styles.home_bg}></div>
+      <div
+        className={styles.home_header}
+        onClick={() => {
+          window.location.href = '/'
+        }}
+      >
         <div className={styles.home_logo}>
           <img src={logo} />
         </div>

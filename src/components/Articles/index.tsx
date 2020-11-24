@@ -2,17 +2,22 @@ import React, { useEffect, useState, FC } from 'react'
 import styles from './index.module.less'
 import { IArticleList, getList } from '@/services/articleService'
 import { getMediaUrl } from '@/services/mediaService'
+import classnames from 'classnames'
 
 interface ArticlesProps {
   type: string
   background: string
 }
 
+interface ArticleItemInfo extends IArticleList {
+  media_url: string
+}
+
 const Articles = (props: ArticlesProps) => {
   const { type, background } = props
 
-  //   const [articleList, setArticleList] = useState<ArticleList []>()
-  const [articleListContent, setArticleListContent] = useState<any>()
+  const [articleList, setArticleList] = useState<ArticleItemInfo[]>()
+  const [hoverItem, setHoverItem] = useState<number>(-1)
 
   useEffect(() => {
     async function getArticleList() {
@@ -22,24 +27,61 @@ const Articles = (props: ArticlesProps) => {
       const content = data.map(async (item) => {
         const media_url = await getMediaUrl(item['featured_media'])
 
-        return (
-          <div key={item['title']['rendered']}>
-            <img src={media_url} />
-            <div>{item['title']['rendered']}</div>
-            <div>{item['date']}</div>
-          </div>
-        )
+        return { media_url, ...item }
       })
-      
+
       // 使用await Promise.all的原因是
       // map是一个异步函数，始终返回Promise[]
-      setArticleListContent(await Promise.all(content))
+      setArticleList(await Promise.all(content))
     }
 
     getArticleList()
   }, [])
 
-  return <div>{articleListContent}</div>
+  return (
+    <div className={styles.article_wrap}>
+      <div className={styles.article_bg} />
+      {articleList?.map((item, idx) => {
+        return (
+          <div
+            className={styles.article_item}
+            key={item.id}
+            onMouseOver={() => {
+              setHoverItem(idx)
+            }}
+            onMouseOut={() => {
+              setHoverItem(-1)
+            }}
+            onClick={() => {
+              window.location.href=`/${type}/${item.id}`
+            }}
+          >
+            <div className={styles.article_item_img}>
+              <img src={item.media_url} />
+            </div>
+
+            <div className={styles.article_item_title}>
+              <div>{item.title.rendered}</div>
+            </div>
+            <div className={styles.article_item_mask_wrap}>
+              <div
+                className={classnames({
+                  [styles.article_item_img_mask]: true,
+                  [styles.article_item_img_mask_hover]: hoverItem === idx
+                })}
+              />
+              <div
+                className={classnames({
+                  [styles.article_item_title_mask]: true,
+                  [styles.article_item_title_mask_hover]: hoverItem === idx
+                })}
+              />
+            </div>
+          </div>
+        )
+      })}
+    </div>
+  )
 }
 
 export default Articles

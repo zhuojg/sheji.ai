@@ -17,7 +17,12 @@ const PageLayout = () => {
   return (
     <div className={styles.layout_wrap}>
       <div className={styles.layout_bg} />
-      <div className={styles.layout_header}>
+      <div
+        className={styles.layout_header}
+        onClick={() => {
+          window.location.href = '/'
+        }}
+      >
         <div className={styles.layout_logo}>
           <img src={logo} />
         </div>
