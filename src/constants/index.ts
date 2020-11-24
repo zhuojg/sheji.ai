@@ -8,23 +8,23 @@ export const CATEGORY_ID: { [key: string]: number } = {
 
 export const NAV_MENU = [
   {
-    name: '新闻',
+    name: '新 闻',
     link: '/news'
   },
   {
-    name: '项目',
+    name: '项 目',
     link: '/projects'
   },
   {
-    name: '教学',
+    name: '教 学',
     link: '/teaching'
   },
   {
-    name: '我们',
+    name: '我 们',
     link: '/about'
   },
   {
-    name: '加入我们',
+    name: '加 入',
     link: '/join'
   }
 ]

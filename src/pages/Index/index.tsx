@@ -32,20 +32,21 @@ const Index = () => {
         <div className={styles.home_nav}>
           {NAV_MENU.map((item, idx) => (
             <Row key={item.name}>
-              <Link to={item.link}>
-                <div
-                  className={styles.home_nav_item}
-                  onMouseOver={() => {
-                    setSelectedItem(idx)
-                    setHover(true)
-                  }}
-                  onMouseOut={() => {
-                    setHover(false)
-                  }}
-                >
-                  {item.name}
-                </div>
-              </Link>
+              <div
+                className={styles.home_nav_item}
+                onMouseOver={() => {
+                  setSelectedItem(idx)
+                  setHover(true)
+                }}
+                onMouseOut={() => {
+                  setHover(false)
+                }}
+                onClick={() => {
+                  window.location.href = item.link
+                }}
+              >
+                {item.name}
+              </div>
             </Row>
           ))}
           <HomeSlides selected={selectedItem} hover={hover} />
@@ -61,7 +62,9 @@ const Index = () => {
       </div>
 
       <div className={styles.home_info}>
-        © {new Date().getFullYear()} 从无限运算力到无限想象力. 沪ICP备17015556号-1
+        © {new Date().getFullYear()} 从无限运算力到无限想象力. 
+        <br />
+        沪ICP备17015556号-1
       </div>
     </div>
   )

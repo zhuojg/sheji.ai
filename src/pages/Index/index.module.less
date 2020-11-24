@@ -97,6 +97,7 @@
     transition: text-stroke 0.1s;
     font-size: 4.5vh;
     color: #ffffff;
+    cursor: pointer;
 
     &:hover {
       color: #000000;
@@ -122,4 +123,52 @@
   height: 8vh;
   color: #ffffff;
   opacity: 30%;
+}
+
+
+@media (max-width: 1024px) {
+  .home_header {
+    display: flex;
+    flex-direction: column;
+    height: 14vh;
+  }
+
+  .home_logo img {
+    height: 5vmin;
+    margin-bottom: 1rem;
+  }
+
+  .home_title {
+    font-size: 2vmin;
+    text-align: center;
+  }
+
+  .home_content {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .home_nav {
+    margin: 0;
+    align-items: center;
+
+    &_item {
+      text-align: center;
+      margin: auto;
+      font-size: 6vmin;
+      line-height: 10vmin
+    }
+  }
+
+  .home_intro {
+    font-size: 1rem;
+  }
+
+  .home_info {
+    font-size: 1rem;
+    text-align: center;
+  }
 }

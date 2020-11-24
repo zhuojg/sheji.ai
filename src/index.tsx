@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.less'
 import Index from './pages/Index'
-import Layout from './layouts'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 ReactDOM.render(
@@ -11,9 +10,6 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/">
           <Index />
-        </Route>
-        <Route path="/">
-          <Layout />
         </Route>
       </Switch>
     </Router>
