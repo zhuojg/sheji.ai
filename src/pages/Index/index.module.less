@@ -14,42 +14,42 @@
   overflow-y: hidden;
 }
 
-.home_bg {
-  position: fixed;
-  left: 0;
-  height: 100%;
-  width: 80%;
+// .home_bg {
+//   position: fixed;
+//   left: 0;
+//   height: 100%;
+//   width: 80%;
 
-  background: url('../../assets/background.svg');
-  background-size: 90%;
-  background-repeat: no-repeat;
-  background-position-x: 30%;
-  background-position-y: 30%;
+//   background: url('../../assets/background.svg');
+//   background-size: 90%;
+//   background-repeat: no-repeat;
+//   background-position-x: 30%;
+//   background-position-y: 30%;
 
-  @keyframes bg_animation {
-    0% {
-      opacity: 0.5;
-    }
+//   @keyframes bg_animation {
+//     0% {
+//       opacity: 0.5;
+//     }
 
-    25% {
-      opacity: 0.4;
-    }
+//     25% {
+//       opacity: 0.4;
+//     }
 
-    50% {
-      opacity: 0.5;
-    }
+//     50% {
+//       opacity: 0.5;
+//     }
 
-    75% {
-      opacity: 0.6;
-    }
+//     75% {
+//       opacity: 0.6;
+//     }
 
-    100% {
-      opacity: 0.5;
-    }
-  }
-  transition: all 0.1s;
-  animation: bg_animation 1s infinite ease-in-out;
-}
+//     100% {
+//       opacity: 0.5;
+//     }
+//   }
+//   transition: all 0.1s;
+//   animation: bg_animation 1s infinite ease-in-out;
+// }
 
 .home_header {
   height: 8vh;
@@ -82,10 +82,11 @@
 
 .home_content {
   display: flex;
-  flex-direction: column;
-  width: 50vw;
+  flex-direction: row;
+  width: 75vw;
   height: 84vh;
-  margin: 0 auto;
+  margin-left: 25vw;
+  justify-content: space-between;
 }
 
 .home_nav {
@@ -108,25 +109,28 @@
 }
 
 .home_intro {
-  color: #ffffff;
-
-  &_title {
-  }
-
-  &_content {
-  }
+  margin-top: 15vh;
+  padding-left: 20vw;
+  color: #aaaaaa;
+  width: 50vw;
+  font-size: 1.2vh;
+  line-height: 2vh;
 }
 
 .home_info {
   text-align: right;
   padding: 0 4rem;
   height: 8vh;
-  color: #ffffff;
-  opacity: 30%;
+  color: rgba(255, 255, 255, 0.3);
 }
 
-
 @media (max-width: 1024px) {
+  .home_wrap {
+    display: flex;
+    flex-direction: column;
+    height: unset;
+  }
+
   .home_header {
     display: flex;
     flex-direction: column;
@@ -144,6 +148,7 @@
   }
 
   .home_content {
+    height: unset;
     display: flex;
     margin: auto;
     flex-direction: column;
@@ -152,23 +157,31 @@
   }
 
   .home_nav {
-    margin: 0;
+    margin: 2vh 0;
     align-items: center;
 
     &_item {
       text-align: center;
       margin: auto;
       font-size: 6vmin;
-      line-height: 10vmin
+      line-height: 10vmin;
     }
   }
 
   .home_intro {
-    font-size: 1rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    margin: 4vh 0;
+    padding: 0;
+    width: 75vw;
   }
 
   .home_info {
     font-size: 1rem;
     text-align: center;
   }
+}
+
+.home_start {
+  display: none;
 }

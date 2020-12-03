@@ -20,10 +20,11 @@ const HomeSlides = (props: HomeSlidesProps) => {
         [styles.offset_2]: selected === 2,
         [styles.offset_3]: selected === 3,
         [styles.offset_4]: selected === 4,
+        [styles.offset_5]: selected === 5,
       })}
     >
       <Row style={{ margin: 'auto' }}>
-        <Col span={4} className={classnames({ [styles.home_slide_item_move]: selected === 0 })}>
+        <Col span={3} className={classnames({ [styles.home_slide_item_move]: selected === 0 })}>
           <div
             className={classnames({
               [styles.home_slide_item]: true,
@@ -32,39 +33,48 @@ const HomeSlides = (props: HomeSlidesProps) => {
             })}
           ></div>
         </Col>
-        <Col span={4} className={classnames({ [styles.home_slide_item_move]: selected === 1 })}>
-          <div
-            className={classnames({
-              [styles.home_slide_item]: true,
-              [styles.home_slide_projects]: true,
-              [styles.home_slide_projects_hover]: selected === 1 && hover
-            })}
-          ></div>
-        </Col>
-        <Col span={4} className={classnames({ [styles.home_slide_item_move]: selected === 2 })}>
-          <div
-            className={classnames({
-              [styles.home_slide_item]: true,
-              [styles.home_slide_teaching]: true,
-              [styles.home_slide_teaching_hover]: selected === 2 && hover
-            })}
-          ></div>
-        </Col>
-        <Col span={4} className={classnames({ [styles.home_slide_item_move]: selected === 3 })}>
+        <Col span={3} className={classnames({ [styles.home_slide_item_move]: selected === 1 })}>
           <div
             className={classnames({
               [styles.home_slide_item]: true,
               [styles.home_slide_about]: true,
-              [styles.home_slide_about_hover]: selected === 3 && hover
+              [styles.home_slide_about_hover]: selected === 1 && hover
             })}
           ></div>
         </Col>
-        <Col span={4} className={classnames({ [styles.home_slide_item_move]: selected === 4 })}>
+        <Col span={3} className={classnames({ [styles.home_slide_item_move]: selected === 2 })}>
+          <div
+            className={classnames({
+              [styles.home_slide_item]: true,
+              [styles.home_slide_research]: true,
+              [styles.home_slide_research_hover]: selected === 2 && hover
+            })}
+          ></div>
+        </Col>
+        <Col span={3} className={classnames({ [styles.home_slide_item_move]: selected === 3 })}>
+          <div
+            className={classnames({
+              [styles.home_slide_item]: true,
+              [styles.home_slide_press]: true,
+              [styles.home_slide_press_hover]: selected === 3 && hover
+            })}
+          ></div>
+        </Col>
+        <Col span={3} className={classnames({ [styles.home_slide_item_move]: selected === 4 })}>
+          <div
+            className={classnames({
+              [styles.home_slide_item]: true,
+              [styles.home_slide_us]: true,
+              [styles.home_slide_us_hover]: selected === 4 && hover
+            })}
+          ></div>
+        </Col>
+        <Col span={3} className={classnames({ [styles.home_slide_item_move]: selected === 5 })}>
           <div
             className={classnames({
               [styles.home_slide_item]: true,
               [styles.home_slide_join]: true,
-              [styles.home_slide_join_hover]: selected === 4 && hover
+              [styles.home_slide_join_hover]: selected === 5 && hover
             })}
           ></div>
         </Col>

@@ -1,7 +1,7 @@
 .home_slide {
-  width: 350%;
+  width: 200vw;
   position: absolute;
-  top: 15vh;
+  top: 30vh;
   left: 0;
   z-index: -1;
   transition: all 0.1s ease-in-out;
@@ -21,38 +21,9 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    
 
     &_hover {
       background: url('../../assets/menu-item-hover/news.svg');
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-    }
-  }
-
-  &_projects {
-    background: url('../../assets/menu-item/projects.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
-    &_hover {
-      background: url('../../assets/menu-item-hover/projects.svg');
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-    }
-  }
-
-  &_teaching {
-    background: url('../../assets/menu-item/teaching.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
-    &_hover {
-      background: url('../../assets/menu-item-hover/teaching.svg');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
@@ -67,6 +38,48 @@
 
     &_hover {
       background: url('../../assets/menu-item-hover/about.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  &_research {
+    background: url('../../assets/menu-item/projects.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    &_hover {
+      background: url('../../assets/menu-item-hover/projects.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  &_press {
+    background: url('../../assets/menu-item/press.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    &_hover {
+      background: url('../../assets/menu-item-hover/press.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  &_us {
+    background: url('../../assets/menu-item/teaching.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    &_hover {
+      background: url('../../assets/menu-item-hover/teaching.svg');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
@@ -93,21 +106,24 @@
 }
 
 .offset_1 {
-  transform: translateX(-16.67%);
+  transform: translateX(-14%);
 }
 
 .offset_2 {
-  transform: translateX(-33.33%);
+  transform: translateX(-26%);
 }
 
 .offset_3 {
-  transform: translateX(-50%);
-} 
-
-.offset_4 {
-  transform: translateX(-66.67%);
+  transform: translateX(-38%);
 }
 
+.offset_4 {
+  transform: translateX(-50%);
+}
+
+.offset_5 {
+  transform: translateX(-62%);
+}
 
 @media (max-width: 1024px) {
   .home_slide {
