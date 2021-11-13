@@ -1,0 +1,29 @@
+version: "3"
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/src/app
+    envrionment:
+      NODE_ENV: production
+      SERVICE_URL: http://strapi:1337/
+    restart: on-failure
+
+  strapi:
+    image: strapi/strapi
+    environment:
+      DATABASE_CLIENT: mongo
+      DATABASE_NAME: sheji-ai
+      DATABASE_HOST: 
+      DATABASE_PORT: 
+      DATABASE_USERNAME: 
+      DATABASE_PASSWORD: 
+    volumes:
+      - ./app:/srv/app
+    ports:
+      - 1337:1337
+    restart: on-failure
