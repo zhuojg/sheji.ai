@@ -8,22 +8,35 @@ services:
       - 3000:3000
     volumes:
       - ./frontend:/src/app
-    envrionment:
+    environment:
       NODE_ENV: production
-      SERVICE_URL: http://strapi:1337/
+      SERVICE_URL: http://strapi:1337
+      NEXT_PUBLIC_URL: ''
     restart: on-failure
 
   strapi:
     image: strapi/strapi
     environment:
       DATABASE_CLIENT: mongo
-      DATABASE_NAME: sheji-ai
-      DATABASE_HOST: 
-      DATABASE_PORT: 
-      DATABASE_USERNAME: 
-      DATABASE_PASSWORD: 
+      DATABASE_NAME: strapi
+      DATABASE_HOST: mongo
+      DATABASE_PORT: 27017
+      DATABASE_USERNAME: strapi
+      DATABASE_PASSWORD: strapi
     volumes:
       - ./app:/srv/app
     ports:
       - 1337:1337
+    restart: on-failure
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_DATABASE: strapi
+      MONGO_INITDB_ROOT_USERNAME: strapi
+      MONGO_INITDB_ROOT_PASSWORD: strapi
+    volumes:
+      - ./data:/data/db
     restart: on-failure
