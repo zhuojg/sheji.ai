@@ -28,7 +28,7 @@ const ProjectCard = (props) => {
   const [onHover, setOnHover] = React.useState(false)
   return (
     <div
-      className="bg-white rounded-lg mx-4 lg:mx-0 cursor-pointer"
+      className="bg-white rounded-lg cursor-pointer"
       onClick={() => {
         router.push(`/research/${project.id}`)
       }}
@@ -52,7 +52,7 @@ const ProjectCard = (props) => {
           alt={project.name}
         />
       </div>
-      <div className={clsx('text-lg p-4', { underline: onHover })}>
+      <div className={clsx('text-sm md:text-md p-4', { underline: onHover })}>
         {project.name}
       </div>
     </div>
@@ -61,14 +61,13 @@ const ProjectCard = (props) => {
 
 const ResearchPage = (props) => {
   const { projects } = props
-  console.log(props)
   return (
     <div className="w-full">
       <Head>
         <title>研究项目</title>
       </Head>
 
-      <div className="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-16">
+      <div className="mx-4 md:mx-12 lg:mx-auto md:max-w-screen-lg py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-16">
         {projects.map((project, index) => {
           return <ProjectCard key={index} project={project} />
         })}

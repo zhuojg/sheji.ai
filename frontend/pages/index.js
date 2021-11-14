@@ -36,7 +36,7 @@ const Home = (props) => {
         <title>{name}</title>
       </Head>
 
-      <div className="prose-white prose-xs sm:prose-sm md:prose-md lg:prose-lg">
+      <div className="prose-white prose-xs sm:prose-sm md:prose-md lg:prose-lg z-10">
         <h1 className="text-white text-center">{name}</h1>
         {/* <p className="text-white text-center">{introduction}</p> */}
       </div>

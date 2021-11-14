@@ -1,11 +1,16 @@
+import '../global.css'
 import 'tailwindcss/tailwind.css'
 import Layout from '../components/layout'
+import ProgressBar from '../components/progress'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <ProgressBar />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   )
 }
 
