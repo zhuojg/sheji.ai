@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { fetchSinglePageData } from '../../services'
 import ReactMarkdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
 
 export async function getServerSideProps(context) {
   const result = await fetchSinglePageData('publication')
@@ -26,8 +27,10 @@ const PublicationPage = (props) => {
     <div className="w-full h-full py-20">
       <Head>论文出版</Head>
 
-      <div className="px-4 mx-auto max-w-prose prose prose-sm md:prose-md text-white">
-        <ReactMarkdown>{props.content}</ReactMarkdown>
+      <div className="px-4 mx-auto max-w-prose prose prose-blue prose-sm md:prose-md text-white">
+        <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+          {props.content}
+        </ReactMarkdown>
       </div>
     </div>
   )

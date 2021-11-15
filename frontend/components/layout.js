@@ -14,8 +14,6 @@ const navigation = [
 const Header = () => {
   const router = useRouter()
 
-  console.log(router)
-
   return (
     <div className="bg-black w-full h-16 flex flex-col justify-center text-white">
       <Menu as="div" className="block sm:hidden">
@@ -38,7 +36,7 @@ const Header = () => {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <div className="fixed h-screen w-screen z-0 bg-black top-0 flex flex-col justify-center">
+              <div className="fixed h-screen w-screen z-10 bg-black top-0 flex flex-col justify-center">
                 <Menu.Items static className={clsx('w-full absolute')}>
                   <div className="flex flex-col space-y-2">
                     {navigation.map((item) => (
