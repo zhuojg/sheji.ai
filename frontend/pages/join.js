@@ -22,14 +22,12 @@ export async function getServerSideProps(context) {
 
 const JoinPage = (props) => {
   return (
-    <div className="w-full h-full py-20">
+    <div className="w-full h-full">
       <Head>
         <title>申请加入</title>
       </Head>
 
-      <div className="px-4 mx-auto max-w-prose prose prose-blue prose-sm md:prose-md text-white">
-        <ReactMarkdown>{props.content}</ReactMarkdown>
-      </div>
+      <ReactMarkdown>{props.content}</ReactMarkdown>
     </div>
   )
 }

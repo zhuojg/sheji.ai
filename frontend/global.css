@@ -12,3 +12,20 @@
 
 #nprogress .peg {
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .content {
+    @apply px-4;
+    @apply mx-auto;
+    @apply max-w-prose;
+    @apply prose;
+    @apply prose-blue;
+    @apply prose-sm;
+    @apply text-white;
+    /* @apply md:prose-md; */
+  }
+}

@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { fetchSinglePageData } from '../services'
+import Image from 'next/image'
 
 export async function getServerSideProps(context) {
   const result = await fetchSinglePageData('homepage')
@@ -20,25 +21,27 @@ export async function getServerSideProps(context) {
 }
 
 const Home = (props) => {
-  const { name, introduction, background } = props
+  const { name, background } = props
 
   return (
-    <div className="flex-grow w-full h-full relative bg-black flex flex-col justify-center">
-      <div className="absolute w-full h-full left-0 top-0">
-        <img
-          className="px-4 md:px-40 lg:px-80 w-full h-full object-center object-contain opacity-20"
-          src={`${process.env.NEXT_PUBLIC_URL}${background.url}`}
-          alt="background"
-        />
-      </div>
-
+    <div className="w-full h-full flex-grow flex flex-col">
       <Head>
         <title>{name}</title>
       </Head>
+      <div className="flex-grow flex flex-col justify-center">
+        <div className="z-10">
+          <div className="w-full h-20 block relative">
+            <Image
+              className="object-contain"
+              src={`${process.env.NEXT_PUBLIC_URL}${background.url}`}
+              alt="background"
+              layout="fill"
+            />
+          </div>
 
-      <div className="prose-white prose-xs sm:prose-sm md:prose-md lg:prose-lg z-10">
-        <h1 className="text-white text-center">{name}</h1>
-        {/* <p className="text-white text-center">{introduction}</p> */}
+          <h2 className="text-white text-center">{name}</h2>
+          {/* <p className="text-white text-center">{introduction}</p> */}
+        </div>
       </div>
     </div>
   )

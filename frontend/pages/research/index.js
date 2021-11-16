@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { fetchListData } from '../../services'
 import clsx from 'clsx'
+import Image from 'next/image'
 
 export async function getServerSideProps(context) {
   const result = await fetchListData('projects')
@@ -39,10 +40,10 @@ const ProjectCard = (props) => {
         setOnHover(false)
       }}
     >
-      <div className="w-full h-48 md:h-60 rounded-t-lg overflow-hidden">
-        <img
+      <div className="w-full h-48 md:h-60 rounded-t-lg overflow-hidden relative block">
+        <Image
           className={clsx(
-            'w-full h-full object-center object-cover',
+            'object-center object-cover',
             'transition-all duration-200 ease-in-out',
             {
               'scale-110': onHover,
@@ -50,6 +51,7 @@ const ProjectCard = (props) => {
           )}
           src={`${process.env.NEXT_PUBLIC_URL}${project.cover.url}`}
           alt={project.name}
+          layout="fill"
         />
       </div>
       <div className={clsx('text-sm md:text-md p-4', { underline: onHover })}>
@@ -67,7 +69,7 @@ const ResearchPage = (props) => {
         <title>研究项目</title>
       </Head>
 
-      <div className="mx-4 md:mx-12 lg:mx-auto md:max-w-screen-lg py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-black">
         {projects.map((project, index) => {
           return <ProjectCard key={index} project={project} />
         })}

@@ -24,14 +24,12 @@ export async function getServerSideProps(context) {
 
 const PublicationPage = (props) => {
   return (
-    <div className="w-full h-full py-20">
+    <div className="w-full h-full">
       <Head>论文出版</Head>
 
-      <div className="px-4 mx-auto max-w-prose prose prose-blue prose-sm md:prose-md text-white">
         <ReactMarkdown rehypePlugins={[rehypeRaw]}>
           {props.content}
         </ReactMarkdown>
-      </div>
     </div>
   )
 }
