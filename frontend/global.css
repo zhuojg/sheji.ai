@@ -17,13 +17,25 @@
 #nprogress .peg {
 }
 
-.container {
-  @apply bg-white;
-  @apply bg-opacity-10;
-  padding: 32px 20px;
-  border-radius: 12px;
+@layer utilities {
+  .content {
+    @apply px-4;
+    @apply mx-auto;
+    @apply max-w-prose;
+    @apply prose;
+    @apply prose-blue;
+    @apply prose-sm;
+    @apply text-white;
+    /* @apply md:prose-md; */
+  }
 
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  
+  .container {
+    @apply bg-white;
+    @apply bg-opacity-10;
+    padding: 32px 20px;
+    border-radius: 12px;
+
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
 }

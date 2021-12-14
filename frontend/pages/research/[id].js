@@ -25,15 +25,13 @@ const ResearchDetail = (props) => {
   const { name, content } = props
 
   return (
-    <div className="w-full py-20">
+    <div className="w-full">
       <Head>
         <title>{name}</title>
       </Head>
 
-      <div className="px-4 mx-auto max-w-prose prose prose-blue prose-sm md:prose-md text-white">
-        <h1>{name}</h1>
-        <ReactMarkdown>{content}</ReactMarkdown>
-      </div>
+      <h1>{name}</h1>
+      <ReactMarkdown>{content}</ReactMarkdown>
     </div>
   )
 }
