@@ -1,11 +1,5 @@
 import axios from 'axios'
 
-export const fetchHomepage = async () => {
-  const result = await axios.get(`${process.env.SERVICE_URL}/homepage`)
-
-  return result
-}
-
 export const fetchSinglePageData = async (type) => {
   const result = await axios.get(`${process.env.SERVICE_URL}/${type}`)
 

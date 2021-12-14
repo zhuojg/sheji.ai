@@ -1,7 +1,10 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  // mode: 'jit',
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
+  // darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       typography: {
@@ -19,10 +22,14 @@ module.exports = {
           },
         },
       },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        inria: ['"Inria Sans"', 'sans-serif'],
+      },
+      spacing: {
+        128: '32rem',
+      },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [require('@tailwindcss/typography')],
 }

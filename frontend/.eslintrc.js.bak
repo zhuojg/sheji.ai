@@ -1,0 +1,28 @@
+module.exports = {
+  extends: ['alloy', 'alloy/react'],
+  plugins: ['react-hooks', 'import', 'prefer-arrow'],
+
+  globals: {
+    NodeJS: true,
+  },
+
+  rules: {
+    'react-hooks/rules-of-hooks': 'error',
+    'max-nested-callbacks': ['warn', 6],
+    'import/no-default-export': 'warn',
+    'import/no-extraneous-dependencies': 'error',
+    'prefer-arrow/prefer-arrow-functions': [
+      'warn',
+      {
+        disallowPrototype: true,
+        singleReturnOnly: false,
+        classPropertiesAllowed: false,
+      },
+    ],
+    'prefer-arrow-callback': ['warn', { allowNamedFunctions: true }],
+    'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
+    'max-params': 'warn',
+    'no-unreachable': 'warn',
+  },
+  settings: { react: { version: 'detect' } },
+}
