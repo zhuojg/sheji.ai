@@ -1,10 +1,11 @@
+import { ArrowDown } from '@/components/icons'
+import { PageTitle } from '@/components/pageTitle'
+import { fetchListData, fetchSinglePageData } from '@/services/index'
+import { renderLinks } from '@/utils/render'
 import clsx from 'clsx'
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
-
-import { ArrowDown } from '../components/icons'
-import { fetchListData, fetchSinglePageData } from '../services'
 
 export async function getServerSideProps(context) {
   const result = await fetchSinglePageData('homepage')
@@ -39,19 +40,10 @@ export async function getServerSideProps(context) {
   }
 }
 
-const LabName = ({ title, subtitle }) => (
-  <>
-    <div className="font-inria font-bold" style={{ fontSize: '40px' }}>
-      {subtitle}
-    </div>
-    <div className="font-inter" style={{ fontSize: '52px', fontWeight: '500' }}>
-      {title}
-    </div>
-  </>
-)
-
 const LabIntro = ({ image, introduction, className }) => (
-  <div className={clsx('w-full grid grid-cols-2 h-72 relative', className)}>
+  <div
+    className={clsx('w-full grid grid-cols-2 gap-8 h-72 relative', className)}
+  >
     <div className="w-full h-full relative">
       <Image
         src={`${process.env.NEXT_PUBLIC_URL}${image.url}`}
@@ -63,9 +55,8 @@ const LabIntro = ({ image, introduction, className }) => (
     <div
       className={clsx(
         'w-full h-full flex flex-col justify-center',
-        'font-inter',
+        'text-xl leading-loose',
       )}
-      style={{ fontSize: '20px', lineHeight: '40px' }}
     >
       {introduction}
     </div>
@@ -74,9 +65,7 @@ const LabIntro = ({ image, introduction, className }) => (
 
 const ResearchIntro = ({ title, content }) => (
   <div className="w-full mt-32">
-    <div className="font-inter text-center" style={{ fontSize: '36px' }}>
-      {title}
-    </div>
+    <div className=" text-center text-4xl">{title}</div>
 
     <div className="flex flex-col space-y-16">
       {content.map((item, index) => (
@@ -90,20 +79,11 @@ const ResearchIntro = ({ title, content }) => (
           </div>
 
           <div className="h-full flex flex-col justify-center">
-            <div className="font-inria" style={{ fontSize: '32px' }}>
-              {item.subtitle}
-            </div>
+            <div className="font-inria text-3xl">{item.subtitle}</div>
 
-            <div className="font-inter pt-4" style={{ fontSize: '32px' }}>
-              {item.title}
-            </div>
+            <div className=" pt-4 text-3xl">{item.title}</div>
 
-            <div
-              className="font-inter pt-8"
-              style={{ fontSize: '20px', lineHeight: '40px' }}
-            >
-              {item.introduction}
-            </div>
+            <div className="pt-8 text-lg leading-8">{item.introduction}</div>
           </div>
         </div>
       ))}
@@ -113,22 +93,15 @@ const ResearchIntro = ({ title, content }) => (
 
 const ReportInfo = ({ title, content }) => (
   <div className="w-full mt-32">
-    <div className="font-inter text-left" style={{fontSize: '36px'}}>
-      {title}
-    </div>
+    <div className="text-left text-4xl">{title}</div>
 
-    <div className="grid grid-cols-3 gap-8  mt-8">
+    <div className="grid grid-cols-3 gap-8 mt-8">
       {content.map((item, index) => (
-        <div key={index} className="container">
-          <div className="">{item.year}</div>
+        <div key={index} className="container py-8 px-8">
+          <div className="text-5xl mb-4">{item.year}</div>
+          <div className="text-xl mb-12">{item.title}</div>
 
-          <div className="">{item.title}</div>
-
-          <div className="flex space-x-4">
-          {Object.keys(item.link).map((key, index) => (
-            <div className="" key={index}>{item.link[key]}</div>
-          ))}
-          </div>
+          {renderLinks(item.link)}
         </div>
       ))}
     </div>
@@ -137,33 +110,39 @@ const ReportInfo = ({ title, content }) => (
 
 const PodcastInfo = ({ title, content }) => (
   <div className="w-full mt-32">
-    <div className="font-inter text-left" style={{fontSize: '36px'}}>
-      {title}
-    </div>
+    <div className="text-left text-4xl">{title}</div>
 
-    <div className="container mt-8">
-      <div className="">{content.title}</div>
+    <div className="container mt-8 py-12 px-8">
+      <div className="text-2xl">{content.title}</div>
 
-      <div className="">
-        <a href={content.link}>{content.link}</a>
+      <div className="mt-12">
+        {renderLinks(content.link)}
       </div>
     </div>
   </div>
 )
 
 const Home = (props) => {
-  const { title, subtitle, introduction, image, researchIntro, reportInfo, podcastInfo } = props
+  const {
+    title,
+    subtitle,
+    introduction,
+    image,
+    researchIntro,
+    reportInfo,
+    podcastInfo,
+  } = props
 
   const contentStartRef = React.useRef(null)
 
   return (
-    <div className="flex-grow w-full h-full relative bg-black flex flex-col">
+    <div className="flex-grow w-full h-full relative flex flex-col">
       <Head>
         <title>{title}</title>
       </Head>
 
       <div className="w-full h-full relative text-white">
-        <LabName title={title} subtitle={subtitle} />
+        <PageTitle title={title} subtitle={subtitle} />
 
         <LabIntro className="mt-32" introduction={introduction} image={image} />
 

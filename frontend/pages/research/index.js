@@ -1,9 +1,11 @@
-import React from 'react'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import { fetchListData } from '../../services'
+import { PageTitle } from '@/components/pageTitle'
 import clsx from 'clsx'
+import Head from 'next/head'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
+import React from 'react'
+
+import { fetchListData } from '../../services'
 
 export async function getServerSideProps(context) {
   const result = await fetchListData('projects')
@@ -29,7 +31,7 @@ const ProjectCard = (props) => {
   const [onHover, setOnHover] = React.useState(false)
   return (
     <div
-      className="bg-white rounded-lg cursor-pointer"
+      className="container cursor-pointer"
       onClick={() => {
         router.push(`/research/${project.id}`)
       }}
@@ -40,7 +42,7 @@ const ProjectCard = (props) => {
         setOnHover(false)
       }}
     >
-      <div className="w-full h-48 md:h-60 rounded-t-lg overflow-hidden relative block">
+      <div className="w-full h-60 lg:h-80 rounded-t-lg overflow-hidden relative block">
         <Image
           className={clsx(
             'object-center object-cover',
@@ -54,8 +56,16 @@ const ProjectCard = (props) => {
           layout="fill"
         />
       </div>
-      <div className={clsx('text-sm md:text-md p-4', { underline: onHover })}>
-        {project.name}
+      <div className="flex flex-col space-y-6 px-8 py-12">
+        <div className={clsx('text-2xl text-white font-medium')}>
+          {project.name}
+        </div>
+
+        {project.introduction && (
+          <div className={clsx('text-md text-gray-300 line-clamp-3')}>
+            {project.introduction}
+          </div>
+        )}
       </div>
     </div>
   )
@@ -69,7 +79,9 @@ const ResearchPage = (props) => {
         <title>研究项目</title>
       </Head>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-black">
+      <PageTitle title="实验室研究项目成果" subtitle="Projects" />
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 mt-32">
         {projects.map((project, index) => {
           return <ProjectCard key={index} project={project} />
         })}

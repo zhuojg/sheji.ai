@@ -452,6 +452,11 @@
   resolved "https://registry.npmmirror.com/@rushstack/eslint-patch/download/@rushstack/eslint-patch-1.1.0.tgz#7f698254aadf921e48dda8c0a6b304026b8a9323"
   integrity sha1-f2mCVKrfkh5I3ajAprMEAmuKkyM=
 
+"@tailwindcss/line-clamp@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.npmmirror.com/@tailwindcss/line-clamp/download/@tailwindcss/line-clamp-0.3.0.tgz#bb342d7bdc11a6568dc6d2aacacd531b25eae7cf"
+  integrity sha512-ffDDclrqr3sy8cpChCozedDUAN8enxqAiWeH8d4dGQ2hcXlxf51+7KleveFi/n/TxEuRVApoL7hICeDOdYPKpg==
+
 "@tailwindcss/typography@^0.5.0":
   version "0.5.0"
   resolved "https://registry.npmmirror.com/@tailwindcss/typography/download/@tailwindcss/typography-0.5.0.tgz#47886ec46ac41e1211d24fea05301046d9b30906"

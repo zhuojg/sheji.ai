@@ -12,11 +12,15 @@ class MyDocument extends Document {
         <Head>
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Inria%20Sans&display=optional"
+            href="https://fonts.googleapis.com/css?family=Inria%20Sans&display=swap"
           />
+          {/* <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Inter&display=swap"
+          /> */}
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Inter&display=optional"
+            href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
           />
         </Head>
         <body>

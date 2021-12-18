@@ -6,6 +6,13 @@ module.exports = {
   ],
   // darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      sans: ['Montserrat', 'ui-sans-serif', 'system-ui'],
+      serif: ['ui-serif', 'Georgia'],
+      mono: ['ui-monospace', 'SFMono-Regular'],
+      inter: ['Inter', 'sans-serif'],
+      inria: ['"Inria Sans"', 'sans-serif'],
+    },
     extend: {
       typography: {
         DEFAULT: {
@@ -22,14 +29,13 @@ module.exports = {
           },
         },
       },
-      fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-        inria: ['"Inria Sans"', 'sans-serif'],
-      },
       spacing: {
         128: '32rem',
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
+  ],
 }

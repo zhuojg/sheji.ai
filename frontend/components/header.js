@@ -1,21 +1,25 @@
-import { Menu, Transition } from '@headlessui/react'
+import { NAVIGATION } from '@/constants'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import clsx from 'clsx'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
-
-const navigation = [
-  { name: '关于我们', href: '/about' },
-  { name: '研究项目', href: '/research' },
-  { name: '论文出版', href: '/publication' },
-  { name: '设计人工智能报告', href: '/report' },
-  { name: '运算力和想象力阅读', href: '/reading' },
-  { name: '申请加入', href: '/join' },
-]
+import { useCallback, useState } from 'react'
 
 export const Header = () => {
   const router = useRouter()
   const [open, setOpen] = useState(false)
+
+  const isCurrentPath = useCallback(
+    (href) => {
+      const { pathname } = router
+      console.log(pathname, href, href === '/', href === pathname)
+
+      if (href === '/') return href === pathname
+
+      return pathname.startsWith(href)
+    },
+    [router],
+  )
 
   return (
     <div className="bg-black w-full h-16 flex flex-col justify-center text-white">
@@ -44,7 +48,7 @@ export const Header = () => {
           )}
         >
           <div className="flex flex-col space-y-2">
-            {navigation.map((item) => (
+            {NAVIGATION.map((item) => (
               <span
                 className={clsx(
                   'mx-auto text-white block px-3 py-2 font-medium',
@@ -52,7 +56,7 @@ export const Header = () => {
                   'transition-all duration-200 ease-in-out',
                   'hover:border-opacity-100',
                   {
-                    'border-opacity-100': router.pathname.startsWith(item.href),
+                    'border-opacity-100': isCurrentPath(item.href),
                   },
                 )}
                 key={item.name}
@@ -70,9 +74,9 @@ export const Header = () => {
       </div>
 
       <div className="hidden sm:flex flex-grow flex-center items-center justify-center">
-        <div className="w-full flex items-center">
+        <div className="w-full flex items-center z-50">
           <div className="mx-auto flex space-x-4">
-            {navigation.map((item) => (
+            {NAVIGATION.map((item) => (
               <span
                 key={item.name}
                 onClick={() => {
@@ -83,7 +87,7 @@ export const Header = () => {
                   'hover:border-opacity-100',
                   'cursor-pointer',
                   {
-                    'border-opacity-100': router.pathname.startsWith(item.href),
+                    'border-opacity-100': isCurrentPath(item.href),
                   },
                 )}
               >
@@ -91,6 +95,15 @@ export const Header = () => {
               </span>
             ))}
           </div>
+        </div>
+
+        <div className="absolute top-0 left-0 right-0 h-screen">
+          <Image
+            className="object-cover object-top"
+            src="/deco.png"
+            layout="fill"
+            alt="deco"
+          />
         </div>
       </div>
     </div>
