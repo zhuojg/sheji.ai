@@ -12,8 +12,6 @@ export const Header = () => {
   const isCurrentPath = useCallback(
     (href) => {
       const { pathname } = router
-      console.log(pathname, href, href === '/', href === pathname)
-
       if (href === '/') return href === pathname
 
       return pathname.startsWith(href)

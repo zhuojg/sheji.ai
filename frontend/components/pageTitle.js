@@ -1,8 +1,19 @@
+import clsx from 'clsx'
+
 export const PageTitle = ({ title, subtitle }) => (
   <>
-    <div className="font-inria font-bold text-4xl mb-8 text-white">
+    <div
+      className={clsx(
+        'font-inria font-bold text-white',
+        'text-xl mb-4',
+        ' lg:text-4xl lg:mb-8',
+      )}
+    >
       {subtitle}
     </div>
-    <div className="font-medium text-5xl text-white">{title}</div>
+    <div className={clsx('font-medium text-white'
+    ,'text-xl', 'lg:text-5xl')}>
+      {title}
+    </div>
   </>
 )

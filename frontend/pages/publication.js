@@ -34,11 +34,11 @@ export async function getServerSideProps(context) {
 
 const InfoList = ({ title, intro, data, renderItem }) => {
   return (
-    <div className="w-full flex flex-col space-y-8 text-white">
-      <div className="text-3xl">{title}</div>
-      <div className="text-lg">{intro}</div>
+    <div className="w-full flex flex-col text-white section-start">
+      <div className="section-title">{title}</div>
+      <div className="container-text">{intro}</div>
 
-      <div className="w-full flex flex-col space-y-8">
+      <div className="w-full flex flex-col space-y-8 mt-4 lg:mt-8">
         {data &&
           data.map((item) => (
             <div key={item.id} className="w-full">
@@ -51,7 +51,7 @@ const InfoList = ({ title, intro, data, renderItem }) => {
 }
 
 const InfoContainer = ({ children }) => {
-  return <div className="w-full container px-4 py-8">{children}</div>
+  return <div className="container container-padding">{children}</div>
 }
 
 const PublicationPage = ({ paperInfo, reportInfo, bookInfo }) => {
@@ -64,15 +64,15 @@ const PublicationPage = ({ paperInfo, reportInfo, bookInfo }) => {
 
       <PageTitle title="实验室出版物和论文" subtitle="Publications" />
 
-      <div className="w-full mt-32 flex flex-col space-y-32">
+      <div className="w-full flex flex-col">
         <InfoList
           title="出版物"
           intro="Lessons and learnings on developing design systems teams and processes"
           data={bookInfo}
           renderItem={(item) => (
             <InfoContainer>
-              <div className="text-3xl font-bold">{item.title}</div>
-              <div className="font-md font-bold mt-4">{item.reference}</div>
+              <div className="container-title font-bold">{item.title}</div>
+              <div className="container-text-sm font-bold mt-4">{item.reference}</div>
               {renderLinks(item.link)}
             </InfoContainer>
           )}
@@ -85,9 +85,9 @@ const PublicationPage = ({ paperInfo, reportInfo, bookInfo }) => {
           renderItem={(item) => (
             <InfoContainer>
               <div className="text-white">
-                <span className="font-bold">{item.author}</span>
+                <span className="font-bold container-text-sm">{item.author}</span>
 
-                <span className="text-gray-300">{item.reference}</span>
+                <span className="text-gray-300 container-text-sm">{item.reference}</span>
               </div>
 
               {renderLinks(item.link)}
@@ -101,11 +101,11 @@ const PublicationPage = ({ paperInfo, reportInfo, bookInfo }) => {
           data={reportInfo}
           renderItem={(item) => (
             <InfoContainer>
-              <div className="text-3xl font-bold">
+              <div className="container-title font-bold">
                 <span>{item.year}</span> <span>{item.title}</span>
               </div>
 
-              <div className="mt-4 font-bold text-lg">{item.author}</div>
+              <div className="mt-4 font-bold container-text">{item.author}</div>
 
               {renderLinks(item.link)}
             </InfoContainer>

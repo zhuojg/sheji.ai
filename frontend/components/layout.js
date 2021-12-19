@@ -15,7 +15,7 @@ const Layout = (props) => {
         className={clsx(
           'w-full max-w-screen-xl mx-auto',
           'flex-grow flex flex-col',
-          'px-8 py-32 z-10',
+          'px-8 py-8 lg:py-32 z-10',
         )}
       >
         {children}

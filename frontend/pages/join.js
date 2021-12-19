@@ -24,11 +24,11 @@ export async function getServerSideProps(context) {
 
 const JoinInfo = ({ content }) => (
   <div className="w-full">
-    <div className="text-3xl font-bold">{content.type}</div>
+    <div className="container-title font-bold">{content.type}</div>
 
     <div className="my-8">{content.intro}</div>
 
-    <div className="container py-12 px-8 max-w-none prose prose-blue text-white">
+    <div className="container container-padding max-w-none prose prose-sm lg:prose-md prose-blue text-white">
       <ReactMarkdown>{content.content}</ReactMarkdown>
     </div>
   </div>
@@ -44,7 +44,7 @@ const JoinPage = (props) => {
 
       <PageTitle title="招生说明" subtitle="Recruitment" />
 
-      <div className="w-full mt-32 flex flex-col space-y-16">
+      <div className="w-full section-start flex flex-col space-y-16">
         {props.data.map((item) => (
           <JoinInfo key={item.id} content={item} />
         ))}

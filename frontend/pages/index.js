@@ -42,9 +42,12 @@ export async function getServerSideProps(context) {
 
 const LabIntro = ({ image, introduction, className }) => (
   <div
-    className={clsx('w-full grid grid-cols-2 gap-8 h-72 relative', className)}
+    className={clsx(
+      'w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:h-72 relative',
+      className,
+    )}
   >
-    <div className="w-full h-full relative">
+    <div className="w-full h-72 lg:h-full relative">
       <Image
         src={`${process.env.NEXT_PUBLIC_URL}${image.url}`}
         alt="introduction"
@@ -55,7 +58,8 @@ const LabIntro = ({ image, introduction, className }) => (
     <div
       className={clsx(
         'w-full h-full flex flex-col justify-center',
-        'text-xl leading-loose',
+        'text-md',
+        'lg:text-xl leading-loose',
       )}
     >
       {introduction}
@@ -64,13 +68,13 @@ const LabIntro = ({ image, introduction, className }) => (
 )
 
 const ResearchIntro = ({ title, content }) => (
-  <div className="w-full mt-32">
-    <div className=" text-center text-4xl">{title}</div>
+  <div className="w-full section-start">
+    <div className=" text-center section-title">{title}</div>
 
-    <div className="flex flex-col space-y-16">
+    <div className="flex flex-col space-y-16 mt-4 lg:mt-0">
       {content.map((item, index) => (
-        <div key={index} className="w-full grid grid-cols-2 gap-16">
-          <div className="w-full h-128 relative">
+        <div key={index} className="w-full grid-1-lg-2">
+          <div className="w-full h-72 lg:h-128 relative">
             <Image
               src={`${process.env.NEXT_PUBLIC_URL}${item.image.url}`}
               layout="fill"
@@ -79,11 +83,13 @@ const ResearchIntro = ({ title, content }) => (
           </div>
 
           <div className="h-full flex flex-col justify-center">
-            <div className="font-inria text-3xl">{item.subtitle}</div>
+            <div className="font-inria container-title">{item.subtitle}</div>
 
-            <div className=" pt-4 text-3xl">{item.title}</div>
+            <div className="pt-2 lg:pt-4 container-title">{item.title}</div>
 
-            <div className="pt-8 text-lg leading-8">{item.introduction}</div>
+            <div className="pt-4 lg:pt-8 container-text">
+              {item.introduction}
+            </div>
           </div>
         </div>
       ))}
@@ -92,14 +98,14 @@ const ResearchIntro = ({ title, content }) => (
 )
 
 const ReportInfo = ({ title, content }) => (
-  <div className="w-full mt-32">
-    <div className="text-left text-4xl">{title}</div>
+  <div className="w-full section-start">
+    <div className="text-left section-title">{title}</div>
 
-    <div className="grid grid-cols-3 gap-8 mt-8">
+    <div className="grid-1-lg-3 mt-4 lg:mt-8">
       {content.map((item, index) => (
-        <div key={index} className="container py-8 px-8">
-          <div className="text-5xl mb-4">{item.year}</div>
-          <div className="text-xl mb-12">{item.title}</div>
+        <div key={index} className="container container-padding">
+          <div className="text-3xl lg:text-5xl mb-4">{item.year}</div>
+          <div className="container-text">{item.title}</div>
 
           {renderLinks(item.link)}
         </div>
@@ -109,15 +115,12 @@ const ReportInfo = ({ title, content }) => (
 )
 
 const PodcastInfo = ({ title, content }) => (
-  <div className="w-full mt-32">
-    <div className="text-left text-4xl">{title}</div>
+  <div className="w-full section-start">
+    <div className="text-left section-title">{title}</div>
 
-    <div className="container mt-8 py-12 px-8">
-      <div className="text-2xl">{content.title}</div>
-
-      <div className="mt-12">
-        {renderLinks(content.link)}
-      </div>
+    <div className="container container-padding">
+      <div className="container-title">{content.title}</div>
+      {renderLinks(content.link)}
     </div>
   </div>
 )
@@ -144,9 +147,13 @@ const Home = (props) => {
       <div className="w-full h-full relative text-white">
         <PageTitle title={title} subtitle={subtitle} />
 
-        <LabIntro className="mt-32" introduction={introduction} image={image} />
+        <LabIntro
+          className="section-start"
+          introduction={introduction}
+          image={image}
+        />
 
-        <div className={clsx('w-full flex justify-center mt-32')}>
+        <div className={clsx('w-full flex justify-center section-start')}>
           <div
             className={clsx(
               'w-6 h-6 cursor-pointer opacity-50',

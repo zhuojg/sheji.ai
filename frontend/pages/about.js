@@ -60,13 +60,16 @@ export async function getServerSideProps(context) {
 
 const ProfessorInfo = ({ title, professors }) => (
   <>
-    <div className="flex space-x-8 h-full">
-      <div className="text-3xl text-white mb-16 whitespace-nowrap">{title}</div>
+    <div className="flex space-x-8 h-full section-start">
+      <div className="section-title text-white whitespace-nowrap">{title}</div>
       <div className="h-4 w-full flex-grow border-b-2 border-white"></div>
     </div>
-    <div className="grid grid-cols-1 lg:grid-cols-4 gap-32 text-white mb-32">
+    <div className="grid-1-lg-4 text-white">
       {professors.map((professor) => (
-        <div className="" key={professor.name}>
+        <div
+          className="flex flex-col space-y-4 lg:space-y-8"
+          key={professor.name}
+        >
           <div className="w-32 h-32 block relative">
             <Image
               className="object-cover object-center rounded-full"
@@ -75,10 +78,8 @@ const ProfessorInfo = ({ title, professors }) => (
               layout="fill"
             />
           </div>
-          <div className="text-md font-bold mt-8">{professor.name}</div>
-          <div className="text-sm text-gray-500 mt-4">
-            {professor.introduction}
-          </div>
+          <div className="text-md font-bold">{professor.name}</div>
+          <div className="text-sm text-gray-500">{professor.introduction}</div>
         </div>
       ))}
     </div>
@@ -87,11 +88,11 @@ const ProfessorInfo = ({ title, professors }) => (
 
 const StudentInfo = ({ title, students }) => (
   <>
-    <div className="flex space-x-8 h-full">
-      <div className="text-3xl text-white mb-16 whitespace-nowrap">{title}</div>
+    <div className="flex space-x-8 h-full section-start">
+      <div className="section-title text-white whitespace-nowrap">{title}</div>
       <div className="h-4 w-full flex-grow border-b-2 border-white"></div>
     </div>
-    <div className="grid grid-cols-1 lg:grid-cols-4 gap-y-16 gap-x-32 text-white mb-32">
+    <div className="grid-2-lg-4 text-white">
       {students.map((student) => (
         <div className="" key={student.name}>
           <div className="w-32 h-32 block relative">
@@ -126,23 +127,19 @@ const AboutPage = (props) => {
 
       <PageTitle title="实验室成员" subtitle="About Us" />
 
-      <div className="mt-32 flex flex-col">
-        <ProfessorInfo title="实验室负责人" professors={props.professors} />
-      </div>
+      <ProfessorInfo title="实验室负责人" professors={props.professors} />
 
-      <div className="">
-        {Object.keys(studentTypeMap).map(
-          (studentType, index) =>
-            props.students[studentType].length > 0 && (
-              <div key={index} className="">
-                <StudentInfo
-                  title={studentTypeMap[studentType]}
-                  students={props.students[studentType]}
-                />
-              </div>
-            ),
-        )}
-      </div>
+      {Object.keys(studentTypeMap).map(
+        (studentType, index) =>
+          props.students[studentType].length > 0 && (
+            <div key={index} className="">
+              <StudentInfo
+                title={studentTypeMap[studentType]}
+                students={props.students[studentType]}
+              />
+            </div>
+          ),
+      )}
     </div>
   )
 }
