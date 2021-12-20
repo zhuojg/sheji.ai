@@ -20,7 +20,7 @@ export const Header = () => {
   return (
     <div
       className={clsx(
-        'fixed lg:relative z-20 left-0 top-0',
+        'fixed lg:relative z-20 lg:z-0 left-0 top-0',
         'bg-black w-full h-16 flex flex-col justify-center text-white',
       )}
     >
