@@ -5,7 +5,7 @@ export const renderLinks = (links) => (
     {Object.keys(links).map((key, index) => (
       <a
         key={index}
-        className={clsx('link container-text', { 'pl-4': index !== 0 })}
+        className={clsx('link text-md', { 'pl-4': index !== 0 })}
         href={links[key]}
         target="_blank"
         rel="noreferrer"

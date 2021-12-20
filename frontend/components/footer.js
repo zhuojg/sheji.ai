@@ -7,7 +7,7 @@ export const Footer = () => {
     <div
       className={clsx(
         'w-full py-16 px-8 bg-black max-w-screen-xl mx-auto',
-        'grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6 justify-between gap-8',
+        'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 justify-between gap-8',
         'text-xs text-gray-300',
       )}
     >

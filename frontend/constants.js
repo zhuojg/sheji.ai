@@ -1,5 +1,4 @@
 export const NAVIGATION = [
-  { name: '首页', href: '/' },
   { name: '关于我们', href: '/about' },
   { name: '研究项目', href: '/research' },
   { name: '论文出版', href: '/publication' },
@@ -9,14 +8,6 @@ export const NAVIGATION = [
 ]
 
 export const FOOTER_ITEM = [
-  {
-    title: '联系邮箱',
-    content: 'help@sheji.ai',
-  },
-  {
-    title: '联系地址',
-    content: '上海市杨浦区阜新路281号',
-  },
   {
     title: '微信公众号',
     content: '设计人工智能网络',

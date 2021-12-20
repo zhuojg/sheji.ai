@@ -54,7 +54,7 @@ const ReadingCard = ({ data }) => {
       <div className="flex flex-col justify-center space-y-4 lg:space-y-8">
         <div
           className={clsx(
-            'container-title font-medium leading-relaxed',
+            'text-lg lg:text-3xl font-medium leading-relaxed lg:leading-relaxed',
             'underline underline-offset-8 decoration-transparent',
             'transition-all duration-200 ease-in-out',
             {
@@ -79,7 +79,10 @@ const ReadingPage = ({ readingData }) => {
         <title>运算力和想象力阅读</title>
       </Head>
 
-      <PageTitle title="经典阅读推荐" subtitle="Design and A.I. History Hub" />
+      <PageTitle
+        title="运算力和想象力阅读"
+        subtitle="Design and A.I. History Hub"
+      />
 
       <div className="section-start flex flex-col space-y-32">
         {readingData.map((item, index) => (

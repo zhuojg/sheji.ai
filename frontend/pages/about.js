@@ -62,7 +62,7 @@ const ProfessorInfo = ({ title, professors }) => (
   <>
     <div className="flex space-x-8 h-full section-start">
       <div className="section-title text-white whitespace-nowrap">{title}</div>
-      <div className="h-4 w-full flex-grow border-b-2 border-white"></div>
+      <div className="h-4 lg:h-6 w-full flex-grow border-b border-white"></div>
     </div>
     <div className="grid-1-lg-4 text-white">
       {professors.map((professor) => (
@@ -90,7 +90,7 @@ const StudentInfo = ({ title, students }) => (
   <>
     <div className="flex space-x-8 h-full section-start">
       <div className="section-title text-white whitespace-nowrap">{title}</div>
-      <div className="h-4 w-full flex-grow border-b-2 border-white"></div>
+      <div className="h-4 lg:h-6 w-full flex-grow border-b-2 border-white"></div>
     </div>
     <div className="grid-2-lg-4 text-white">
       {students.map((student) => (

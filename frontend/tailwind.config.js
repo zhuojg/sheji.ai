@@ -7,7 +7,7 @@ module.exports = {
   // darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ['Montserrat', 'ui-sans-serif', 'system-ui'],
+      sans: ['"Inria Sans"', 'ui-sans-serif', 'system-ui'],
       serif: ['ui-serif', 'Georgia'],
       mono: ['ui-monospace', 'SFMono-Regular'],
       inter: ['Inter', 'sans-serif'],

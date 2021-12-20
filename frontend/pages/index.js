@@ -43,7 +43,7 @@ export async function getServerSideProps(context) {
 const LabIntro = ({ image, introduction, className }) => (
   <div
     className={clsx(
-      'w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:h-72 relative',
+      'w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-48 lg:h-72 relative',
       className,
     )}
   >
@@ -58,8 +58,9 @@ const LabIntro = ({ image, introduction, className }) => (
     <div
       className={clsx(
         'w-full h-full flex flex-col justify-center',
+        'leading-loose',
         'text-md',
-        'lg:text-xl leading-loose',
+        'lg:text-lg lg:leading-loose',
       )}
     >
       {introduction}
@@ -73,7 +74,7 @@ const ResearchIntro = ({ title, content }) => (
 
     <div className="flex flex-col space-y-16 mt-4 lg:mt-0">
       {content.map((item, index) => (
-        <div key={index} className="w-full grid-1-lg-2">
+        <div key={index} className="w-full grid-1-lg-2 relative">
           <div className="w-full h-72 lg:h-128 relative">
             <Image
               src={`${process.env.NEXT_PUBLIC_URL}${item.image.url}`}
@@ -105,7 +106,7 @@ const ReportInfo = ({ title, content }) => (
       {content.map((item, index) => (
         <div key={index} className="container container-padding">
           <div className="text-3xl lg:text-5xl mb-4">{item.year}</div>
-          <div className="container-text">{item.title}</div>
+          <div className="text-lg lg:text-xl">{item.title}</div>
 
           {renderLinks(item.link)}
         </div>
@@ -145,7 +146,28 @@ const Home = (props) => {
       </Head>
 
       <div className="w-full h-full relative text-white">
-        <PageTitle title={title} subtitle={subtitle} />
+        {/* <PageTitle title={title} subtitle={subtitle} /> */}
+        <div
+          className={clsx(
+            'font-inria font-bold text-white',
+            'text-2xl mb-4',
+            ' lg:text-4xl lg:mb-8',
+          )}
+        >
+          Design A.I. Lab
+        </div>
+
+        <div
+          className={clsx(
+            'font-medium text-white',
+            'text-2xl',
+            'lg:text-5xl',
+            'flex flex-col lg:flex-row',
+          )}
+        >
+          <span>同济大学</span>
+          <span>设计人工智能实验室</span>
+        </div>
 
         <LabIntro
           className="section-start"

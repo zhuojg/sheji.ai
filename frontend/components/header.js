@@ -12,15 +12,18 @@ export const Header = () => {
   const isCurrentPath = useCallback(
     (href) => {
       const { pathname } = router
-      if (href === '/') return href === pathname
-
       return pathname.startsWith(href)
     },
     [router],
   )
 
   return (
-    <div className="bg-black w-full h-16 flex flex-col justify-center text-white">
+    <div
+      className={clsx(
+        'fixed lg:relative z-20 left-0 top-0',
+        'bg-black w-full h-16 flex flex-col justify-center text-white',
+      )}
+    >
       <div className="p-2 sm:hidden">
         <div
           className="h-8 w-8 cursor-pointer relative z-50"
@@ -41,10 +44,26 @@ export const Header = () => {
             'bg-black top-0 left-0 right-0',
             'flex flex-col justify-center',
             'transition-all duration-150 ease-in-out',
-            open ? 'z-40' : 'z-0',
+            {
+              hidden: !open,
+            },
             open ? 'opacity-100' : 'opacity-0',
           )}
         >
+          <div className="absolute top-16 w-full mx-auto">
+            <div className="h-8 w-32 mx-auto relative">
+              <Image
+                className="object-contain cursor-pointer"
+                src={`${process.env.NEXT_PUBLIC_URL}/logo.png`}
+                layout="fill"
+                alt="logo"
+                onClick={() => {
+                  router.push('/')
+                }}
+              />
+            </div>
+          </div>
+
           <div className="flex flex-col space-y-2">
             {NAVIGATION.map((item) => (
               <span
@@ -72,7 +91,18 @@ export const Header = () => {
       </div>
 
       <div className="hidden sm:flex flex-grow flex-center items-center justify-center">
-        <div className="w-full flex items-center z-50">
+        <div className="w-full flex items-center z-50 relative">
+          <div className="absolute left-0 h-8 w-32">
+            <Image
+              className="object-contain cursor-pointer"
+              src={`${process.env.NEXT_PUBLIC_URL}/logo.png`}
+              layout="fill"
+              alt="logo"
+              onClick={() => {
+                router.push('/')
+              }}
+            />
+          </div>
           <div className="mx-auto flex space-x-4">
             {NAVIGATION.map((item) => (
               <span
