@@ -1,19 +1,19 @@
 {
-  "arrowParens": "always",
-  "printWidth": 80,
-  "quoteProps": "consistent",
-  "semi": false,
-  "singleQuote": true,
-  "trailingComma": "all",
-  "importOrder": ["^[./]"],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true,
-  "overrides": [
-    {
-      "files": ".prettierrc",
-      "options": {
-        "parser": "json"
+    "arrowParens": "always",
+    "printWidth": 80,
+    "quoteProps": "consistent",
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "importOrder": ["^[./]"],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true,
+    "overrides": [
+      {
+        "files": ".prettierrc",
+        "options": {
+          "parser": "json"
+        }
       }
-    }
-  ]
-}
+    ]
+  }

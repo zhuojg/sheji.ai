@@ -1,34 +1,51 @@
 {
   "private": true,
+  "name": "sheji-dot-ai",
+  "description": "",
+  "license": "",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "npm run build:css && remix build",
+    "build:css": "tailwindcss -o ./app/tailwind.css",
+    "dev": "concurrently \"yarn dev:css\" \"node -r dotenv/config node_modules/.bin/remix dev\"",
+    "dev:css": "tailwindcss -o ./app/tailwind.css --watch",
+    "postinstall": "remix setup node",
+    "start": "remix-serve build",
+    "lint": "eslint --ext .ts,.tsx app/"
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
+    "@remix-run/react": "^1.1.1",
+    "@remix-run/serve": "^1.1.1",
     "@tailwindcss/line-clamp": "^0.3.0",
     "@tailwindcss/typography": "^0.5.0",
     "axios": "^0.24.0",
     "clsx": "^1.1.1",
-    "next": "latest",
-    "nprogress": "^0.2.0",
+    "dotenv": "^10.0.0",
+    "markdown-to-jsx": "^7.1.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-markdown": "^7.1.0",
-    "rehype-raw": "^6.1.0"
+    "remix": "^1.1.1"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^3.1.1",
-    "autoprefixer": "^10.4.0",
-    "eslint": "^8.4.1",
-    "eslint-config-next": "12.0.7",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-react": "^7.27.1",
-    "eslint-plugin-react-hooks": "^4.3.0",
+    "@remix-run/dev": "^1.1.1",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "autoprefixer": "^10.4.2",
+    "babel-eslint": "^10.1.0",
+    "concurrently": "^7.0.0",
+    "eslint": "^8.6.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
     "postcss": "^8.4.5",
-    "prettier": "^2.4.1",
-    "tailwindcss": "^3.0.2"
-  }
+    "prettier": "^2.5.1",
+    "tailwindcss": "^3.0.11",
+    "typescript": "^4.1.2"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "sideEffects": false
 }
