@@ -4,14 +4,17 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      # args:
+      #   - SERVICE_URL=http://strapi:1337
+      #   - STATIC_URL=https://sheji.ai
     ports:
       - 3000:3000
-    volumes:
-      - ./frontend:/src/app
+    # volumes:
+    #   - ./frontend:/src/app
     environment:
       NODE_ENV: production
       SERVICE_URL: http://strapi:1337
-      NEXT_PUBLIC_URL: ''
+      STATIC_URL: https://sheji.ai
     restart: on-failure
 
   strapi:
