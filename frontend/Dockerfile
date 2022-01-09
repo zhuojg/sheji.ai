@@ -1,4 +1,5 @@
 FROM node:alpine
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 RUN apk add --no-cache libc6-compat
 
 WORKDIR /app
@@ -11,11 +12,11 @@ ENV SERVICE_URL $SERVICE_URL
 ENV NODE_ENV production
 
 COPY . .
-RUN yarn install --frozen-lockfile
-RUN yarn build && yarn install --production --ignore-scripts --prefer-offline
+
+RUN yarn config set registry https://registry.npm.taobao.org
+RUN yarn install --production=false # force to add some dev dependencies, or remix will not be installed
+RUN yarn build
 
 EXPOSE 3000
 
-ENV PORT 3000
-
-CMD ["node_modules/.bin/remix-serve", "start"]
+CMD ["yarn", "start"]
