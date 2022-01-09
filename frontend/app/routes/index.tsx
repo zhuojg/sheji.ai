@@ -7,6 +7,7 @@ import { getIntroduction } from '~/services/introduction'
 import { getProjectsList, Project } from '~/services/projects'
 import { styles } from '~/constants'
 import { LabName } from '~/components/labName'
+import { Deco } from '~/components/deco'
 
 export const meta: MetaFunction = () => {
   return {
@@ -56,24 +57,29 @@ const Index = () => {
         {Object.keys(projectThemes).map(
           (groupName) =>
             groupName in groupedProjects && (
-              <div key={groupName} className="flex">
-                <div className="flex-0 w-36 mr-16">
+              <div key={groupName} className="flex flex-col md:flex-row">
+                <div className="flex-0 w-36 mr-16 mb-4 md:mb-0">
                   <img
                     src={`${projectThemes[groupName].media}`}
                     alt={groupName}
                   />
                 </div>
                 <div className="flex-grow">
-                  <div className={clsx('flex divide-x-2', styles.h2)}>
-                    <span className="pr-2">
+                  <div
+                    className={clsx(
+                      'flex flex-col md:flex-row md:divide-x-2',
+                      styles.h2,
+                    )}
+                  >
+                    <span className="md:pr-2">
                       {projectThemes[groupName].name}
                     </span>
-                    <span className="pl-2">
+                    <span className="md:pl-2">
                       {projectThemes[groupName].name_en}
                     </span>
                   </div>
                   <div className="flex flex-col space-y-2 mt-4">
-                    {groupedProjects[groupName].map((project) => (
+                    {groupedProjects[groupName].map((project: Project) => (
                       <Link
                         className={clsx(styles.link)}
                         key={project.id}

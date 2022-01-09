@@ -68,7 +68,7 @@ const SectionTitle: FC<{ title: string }> = ({ title }) => (
     <div className={clsx('text-white whitespace-nowrap', styles.h1)}>
       {title}
     </div>
-    <div className="h-5 w-full flex-grow border-b border-white"></div>
+    <div className="h-4 md:h-5 w-full flex-grow border-b border-white" />
   </div>
 )
 
@@ -145,7 +145,12 @@ const About = () => {
           {introduction.content}
         </div>
 
-        <div className="md:col-span-2"></div>
+        <div className="md:col-span-2">
+          <video
+            src={introduction.introduction_video}
+            crossOrigin="anonymous"
+          />
+        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
         <div className="w-full h-auto">

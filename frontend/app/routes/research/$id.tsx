@@ -7,10 +7,15 @@ import Markdown from 'markdown-to-jsx'
 import clsx from 'clsx'
 import { MARKDOWN_STYLE } from '~/constants'
 
-export const meta: MetaFunction = ({ data }: { data: Project | undefined }) => {
+export const meta: MetaFunction = ({
+  data,
+}: {
+  data: { project: Project | undefined }
+}) => {
+  const { project } = data
   return {
-    title: `${data?.name} | 设计人工智能实验室`,
-    description: data?.introduction ?? '',
+    title: `${project ? `${project.name} | ` : ''}设计人工智能实验室`,
+    description: project?.introduction ?? '',
   }
 }
 

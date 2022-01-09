@@ -20,25 +20,25 @@ export const FOOTER: Footer[] = [
   {
     title: '微信公众号',
     content: '设计人工智能网络',
-    media: 'https://sheji.ai/uploads/lab_qrcode_706e9da328.jpg',
+    media: 'https://sheji.ai/uploads/qrcode_sheji_ai_1_e5a3437c03.jpg',
   },
   {
     title: '设计科技播客',
     content: '特有想象力',
-    media: 'https://sheji.ai/uploads/lab_qrcode_706e9da328.jpg',
+    media: 'https://sheji.ai/uploads/tyxxl_qr_code_6b8fdf220b.jpeg',
   },
 ]
 
 export const LOGO_URL = '/uploads/logo_light_c7fc3bf7_17d9bda4f2.png'
 
 export const styles = {
-  h1: 'text-3xl font-light',
-  h2: 'text-xl font-light',
-  p: 'text-base font-light leading-loose',
+  h1: 'text-xl md:text-3xl',
+  h2: 'text-md md:text-xl',
+  p: 'text-sm md:text-base font-light leading-loose',
   link: 'text-sm font-light text-white hover:text-gray-300 transition-all duration-200 ease-in-out',
   linkPrimary: 'text-blue-600 hover:text-blue-800',
   container: 'bg-white bg-opacity-10 rounded-lg backdrop-blur-lg',
-  containerPaddingSmall: 'p-2 md:p-4',
+  containerPaddingSmall: 'p-3 md:p-4',
   containerPadding: 'p-4 md:p-8',
   animate: 'transition-all duration-200 ease-in-out',
 }

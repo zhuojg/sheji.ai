@@ -62,7 +62,7 @@ const ProjectsList = () => {
 
   return (
     <div className="flex-grow max-w-5xl mx-auto my-16">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
         {projects.map((project) => (
           <ProjectItem key={project.id} project={project} />
         ))}

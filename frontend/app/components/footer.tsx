@@ -5,14 +5,17 @@ export const Footer = () => {
   return (
     <div
       className={clsx(
-        'w-full py-16 px-8 bg-black max-w-screen-xl mx-auto',
-        'grid grid-cols-1 md:grid-cols-3 justify-between gap-8',
+        'mx-8 mt-32 py-16 z-10',
+        'grid grid-cols-1 md:grid-cols-3 gap-8',
         'text-xs text-gray-300',
       )}
     >
       {FOOTER.map((item, index) => (
-        <div key={index} className={clsx('flex justify-center space-x-4')}>
-          <div className="flex flex-col space-y-4">
+        <div
+          key={index}
+          className={clsx('flex justify-start md:justify-center space-x-4')}
+        >
+          <div className="flex flex-col space-y-4 w-32">
             <div className="font-bold">{item.title}</div>
             <div className="font-thin">{item.content}</div>
           </div>
@@ -25,7 +28,7 @@ export const Footer = () => {
         </div>
       ))}
 
-      <div className="flex flex-col mx-auto">
+      <div className="flex flex-col md:mx-auto">
         <span className="font-bold">
           © {new Date().getFullYear()} 同济大学设计人工智能实验室
         </span>

@@ -12,6 +12,7 @@ import { Navigation } from '~/components/navigation'
 import { Footer } from '~/components/footer'
 import { useRef } from 'react'
 import { useOnScreen } from '~/hooks/onScreen'
+import { Deco } from './components/deco'
 
 export const loader = () => {
   return {
@@ -56,11 +57,14 @@ export default function App() {
           <div className="absolute w-full h-auto top-0 inset-x-0 z-0 hidden md:block">
             <img className="w-full h-auto" src="images/deco.png" alt="deco" />
           </div>
-          <div className="flex-grow mt-40 z-10 px-4 sm:px-6 flex">
+          <div className="flex-grow mt-40 z-10 px-8 sm:px-6 flex">
             <Outlet />
           </div>
+
           <Footer />
+          <Deco />
         </div>
+        
         <ScrollRestoration />
         <Scripts />
         {process.env.NODE_ENV === 'development' && <LiveReload />}

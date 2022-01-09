@@ -3,7 +3,7 @@ import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import clsx from 'clsx'
 import { LOGO_URL, NAVIGATION } from '~/constants'
-import { Link, useLoaderData } from 'remix'
+import { Link, useLoaderData, NavLink } from 'remix'
 
 const Logo: FC<{ isBig: boolean }> = ({ isBig }) => {
   const { staticUrl } = useLoaderData()
@@ -68,19 +68,26 @@ const MobileMenuPopover: FC = () => (
           </Popover.Button>
         </div>
 
-        <div className="flex flex-col space-y-4 mt-4 w-full">
+        <div className="flex flex-col space-y-8 mt-4 w-full">
           {NAVIGATION.map((item) => (
-            <Link
-              key={item.name}
-              className={clsx(
-                'mx-auto text-base font-medium',
-                'text-gray-100 hover:text-gray-300',
-                'p-2',
-              )}
-              to={item.url}
-            >
-              {item.name}
-            </Link>
+            <Popover.Button className="mx-auto">
+              <NavLink
+                key={item.name}
+                className={({ isActive }) =>
+                  clsx(
+                    'w-full text-base font-medium',
+                    'text-gray-100 hover:text-gray-300',
+                    'p-2 border-b-2',
+                    isActive
+                      ? 'border-opacity-100'
+                      : ' border-opacity-0 hover:border-opacity-100',
+                  )
+                }
+                to={item.url}
+              >
+                {item.name}
+              </NavLink>
+            </Popover.Button>
           ))}
         </div>
       </div>
@@ -88,25 +95,31 @@ const MobileMenuPopover: FC = () => (
   </Transition>
 )
 
-const DesktopMenuContent: FC = () => (
-  <div className="hidden md:block space-x-10">
-    {NAVIGATION.map((item) => (
-      <Link
-        key={item.name}
-        className={clsx(
-          'text-sm text-white',
-          'px-3 py-2',
-          'border-b-2 border-opacity-0 border-white',
-          'transition-all duration-200 ease-in-out',
-          'hover:border-opacity-100',
-        )}
-        to={item.url}
-      >
-        {item.name}
-      </Link>
-    ))}
-  </div>
-)
+const DesktopMenuContent: FC = () => {
+  return (
+    <div className="hidden md:block space-x-10">
+      {NAVIGATION.map((item) => (
+        <NavLink
+          key={item.name}
+          className={({ isActive }) =>
+            clsx(
+              'text-sm text-white',
+              'px-3 py-2',
+              'border-b-2 border-white',
+              'transition-all duration-200 ease-in-out',
+              isActive
+                ? 'border-opacity-100'
+                : ' border-opacity-0 hover:border-opacity-100',
+            )
+          }
+          to={item.url}
+        >
+          {item.name}
+        </NavLink>
+      ))}
+    </div>
+  )
+}
 
 export const Navigation: FC<{ isBig: boolean }> = ({ isBig }) => {
   return (
