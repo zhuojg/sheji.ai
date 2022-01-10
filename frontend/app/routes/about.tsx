@@ -148,6 +148,8 @@ const About = () => {
         <div className="md:col-span-2">
           <video
             src={introduction.introduction_video}
+            autoPlay
+            controls
             crossOrigin="anonymous"
           />
         </div>
