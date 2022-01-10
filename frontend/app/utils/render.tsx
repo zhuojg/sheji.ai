@@ -6,14 +6,13 @@ export const renderLinks: (links: Record<string, string>) => ReactElement = (
   links,
 ) => {
   return (
-    <div
-      className={clsx('flex space-x-4 mt-4 lg:mt-8 divide-x divide-blue-600')}
-    >
+    <div className={clsx('flex space-x-4 mt-4 lg:mt-8')}>
       {Object.keys(links).map((key, index) => (
         <a
           key={index}
           className={clsx(
-            { 'pl-4': index !== 0 },
+            // { 'ml-4': index !== 0 },
+            'font-bold',
             styles.link,
             styles.linkPrimary,
           )}

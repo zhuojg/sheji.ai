@@ -134,7 +134,7 @@ const About = () => {
   } = useLoaderData<LoaderDataType>()
 
   return (
-    <div className="flex-grow w-full flex flex-col max-w-5xl mx-auto">
+    <div className="flex-grow w-full flex flex-col max-w-3xl mx-auto">
       <div className="text-center text-white">
         <LabName name={introduction.name} name_en={introduction.name_en} />
       </div>
@@ -147,6 +147,7 @@ const About = () => {
 
         <div className="md:col-span-2">
           <video
+            className="w-full h-auto"
             src={introduction.introduction_video}
             autoPlay
             controls

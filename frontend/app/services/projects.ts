@@ -6,6 +6,7 @@ export interface Project {
   category: string
   content: string
   cover: Image
+  external_link: string
   name: string
   introduction: string
   published_at: string

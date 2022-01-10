@@ -11,7 +11,10 @@ export const meta: MetaFunction = () => {
 }
 
 export const loader = async () => {
-  const projects = await getProjectsList()
+  const projects = (await getProjectsList()).filter(
+    (item) => !item.external_link,
+  )
+
   return { projects, staticUrl: process.env.STATIC_URL }
 }
 

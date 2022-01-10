@@ -18,7 +18,7 @@ const Join = () => {
   const { joinInfo } = useLoaderData<{ joinInfo: Join }>()
 
   return (
-    <div className={clsx('flex-grow max-w-5xl mx-auto text-white mt-16')}>
+    <div className={clsx('flex-grow max-w-xl mx-auto text-white mt-16')}>
       <div className={clsx(...MARKDOWN_STYLE)}>
         <Markdown>{joinInfo.content}</Markdown>
       </div>

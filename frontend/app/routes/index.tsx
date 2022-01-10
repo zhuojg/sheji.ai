@@ -78,15 +78,25 @@ const Index = () => {
                       {projectThemes[groupName].name_en}
                     </span>
                   </div>
-                  <div className="flex flex-col space-y-2 mt-4">
+                  <div className="flex flex-col space-y-4 mt-4">
                     {groupedProjects[groupName].map((project: Project) => (
-                      <Link
-                        className={clsx(styles.link)}
-                        key={project.id}
-                        to={`/research/${project.id}`}
-                      >
-                        {`- ${project.name}`}
-                      </Link>
+                      <div className="">
+                        {project.external_link ? (
+                          <a
+                            className={clsx(styles.link)}
+                            href={project.external_link}
+                            target="_blank"
+                          >{`- ${project.name}`}</a>
+                        ) : (
+                          <Link
+                            className={clsx(styles.link)}
+                            key={project.id}
+                            to={`/research/${project.id}`}
+                          >
+                            {`- ${project.name}`}
+                          </Link>
+                        )}
+                      </div>
                     ))}
                   </div>
                 </div>

@@ -5,7 +5,7 @@ import { Project } from '~/services/projects'
 import type { MetaFunction } from 'remix'
 import Markdown from 'markdown-to-jsx'
 import clsx from 'clsx'
-import { MARKDOWN_STYLE } from '~/constants'
+import { MARKDOWN_STYLE, styles } from '~/constants'
 
 export const meta: MetaFunction = ({
   data,
@@ -28,8 +28,8 @@ const Project = () => {
   const { project } = useLoaderData<{ project: Project }>()
 
   return (
-    <div className="flex-grow max-w-5xl mx-auto text-white">
-      <div className="text-3xl font-light text-center mt-8 mb-24">
+    <div className="flex-grow max-w-xl mx-auto text-white">
+      <div className={clsx('text-center mt-8 mb-24 font-light', styles.h1)}>
         {project.name}
       </div>
       <div className={clsx(...MARKDOWN_STYLE)}>
