@@ -54,54 +54,54 @@ const Index = () => {
 
       {/** projects part */}
       <div className={clsx('flex flex-col space-y-8', 'text-white', 'mt-16')}>
-        {Object.keys(projectThemes).map(
-          (groupName) =>
-            groupName in groupedProjects && (
-              <div key={groupName} className="flex flex-col md:flex-row">
-                <div className="flex-0 w-36 mr-16 mb-4 md:mb-0">
-                  <img
-                    src={`${projectThemes[groupName].media}`}
-                    alt={groupName}
-                  />
+        {Object.keys(projectThemes).map((groupName) =>
+          groupName in groupedProjects ? (
+            <div key={groupName} className="flex flex-col md:flex-row">
+              <div className="flex-0 w-36 mr-16 mb-4 md:mb-0">
+                <img
+                  src={`${projectThemes[groupName].media}`}
+                  alt={groupName}
+                />
+              </div>
+              <div className="flex-grow">
+                <div
+                  className={clsx(
+                    'flex flex-col md:flex-row md:divide-x-2',
+                    styles.h2,
+                  )}
+                >
+                  <span className="md:pr-2">
+                    {projectThemes[groupName].name}
+                  </span>
+                  <span className="md:pl-2">
+                    {projectThemes[groupName].name_en}
+                  </span>
                 </div>
-                <div className="flex-grow">
-                  <div
-                    className={clsx(
-                      'flex flex-col md:flex-row md:divide-x-2',
-                      styles.h2,
-                    )}
-                  >
-                    <span className="md:pr-2">
-                      {projectThemes[groupName].name}
-                    </span>
-                    <span className="md:pl-2">
-                      {projectThemes[groupName].name_en}
-                    </span>
-                  </div>
-                  <div className="flex flex-col space-y-4 mt-4">
-                    {groupedProjects[groupName].map((project: Project) => (
-                      <div className="">
-                        {project.external_link ? (
-                          <a
-                            className={clsx(styles.link)}
-                            href={project.external_link}
-                            target="_blank"
-                          >{`- ${project.name}`}</a>
-                        ) : (
-                          <Link
-                            className={clsx(styles.link)}
-                            key={project.id}
-                            to={`/research/${project.id}`}
-                          >
-                            {`- ${project.name}`}
-                          </Link>
-                        )}
-                      </div>
-                    ))}
-                  </div>
+                <div className="flex flex-col space-y-4 mt-4">
+                  {groupedProjects[groupName].map((project: Project) => (
+                    <div className="" key={project.id}>
+                      {project.external_link ? (
+                        <a
+                          className={clsx(styles.link)}
+                          href={project.external_link}
+                          target="_blank"
+                        >{`- ${project.name}`}</a>
+                      ) : (
+                        <Link
+                          className={clsx(styles.link)}
+                          to={`/research/${project.id}`}
+                        >
+                          {`- ${project.name}`}
+                        </Link>
+                      )}
+                    </div>
+                  ))}
                 </div>
               </div>
-            ),
+            </div>
+          ) : (
+            <div key={groupName} />
+          ),
         )}
       </div>
     </div>

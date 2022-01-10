@@ -7,6 +7,7 @@ export const Deco: FC = () => {
       {[...Array(4).keys()].map((i) => (
         <div
           className="absolute right-0 w-2/3 md:w-auto"
+          key={i}
           style={{ top: `${i * 1400 + 600}px`, height: '800px' }}
         >
           <img
@@ -18,6 +19,7 @@ export const Deco: FC = () => {
 
       {[...Array(4).keys()].map((i) => (
         <div
+          key={i}
           className="absolute left-0 w-2/3 md:w-auto"
           style={{ top: `${i * 1400 + 1400}px`, height: '600px' }}
         >

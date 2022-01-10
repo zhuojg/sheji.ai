@@ -2,6 +2,7 @@ import { FC } from 'react'
 import { Link } from 'remix'
 import { ArrowSmUpIcon } from '@heroicons/react/outline'
 import clsx from 'clsx'
+import { styles } from '~/constants'
 
 export const LinkButton: FC<{ text: string; to: string }> = ({ text, to }) => {
   return (
@@ -9,9 +10,7 @@ export const LinkButton: FC<{ text: string; to: string }> = ({ text, to }) => {
       to={to}
       className={clsx(
         'flex justify-between items-center py-2 text-white',
-        'border-b border-white border-opacity-100',
-        'hover:opacity-70',
-        'transition-all duration-200 ease-in-out',
+        styles.link,
       )}
     >
       <span className="text-sm font-light">{text}</span>

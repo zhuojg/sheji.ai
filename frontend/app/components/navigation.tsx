@@ -70,7 +70,7 @@ const MobileMenuPopover: FC = () => (
 
         <div className="flex flex-col space-y-8 mt-4 w-full">
           {NAVIGATION.map((item) => (
-            <Popover.Button className="mx-auto">
+            <Popover.Button className="mx-auto" key={item.name}>
               <NavLink
                 key={item.name}
                 className={({ isActive }) =>
