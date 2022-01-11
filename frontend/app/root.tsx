@@ -51,10 +51,10 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <div className="flex flex-col min-h-screen w-screen bg-black relative">
+        <div className="flex flex-col min-h-screen w-full bg-black relative">
           <div className="h-0" ref={topRef} />
           <Navigation isBig={isTopVisible} />
-          <div className="absolute w-full h-auto top-0 inset-x-0 z-0 hidden md:block">
+          <div className="absolute w-full h-full top-0 inset-x-0 z-0 hidden md:block overflow-hidden">
             <img className="w-full h-auto" src="images/deco.png" alt="deco" />
           </div>
           <div className="flex-grow mt-40 z-10 px-8 sm:px-6 flex">
@@ -64,7 +64,7 @@ export default function App() {
           <Footer />
           <Deco />
         </div>
-        
+
         <ScrollRestoration />
         <Scripts />
         {process.env.NODE_ENV === 'development' && <LiveReload />}
