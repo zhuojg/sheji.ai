@@ -7,7 +7,6 @@ import { getIntroduction } from '~/services/introduction'
 import { getProjectsList, Project } from '~/services/projects'
 import { styles } from '~/constants'
 import { LabName } from '~/components/labName'
-import { Deco } from '~/components/deco'
 
 export const meta: MetaFunction = () => {
   return {
@@ -78,24 +77,36 @@ const Index = () => {
                   </span>
                 </div>
                 <div className="flex flex-col space-y-4 mt-4">
-                  {groupedProjects[groupName].map((project: Project) => (
-                    <div className="" key={project.id}>
-                      {project.external_link ? (
-                        <a
-                          className={clsx(styles.link)}
-                          href={project.external_link}
-                          target="_blank"
-                        >{`- ${project.name}`}</a>
-                      ) : (
-                        <Link
-                          className={clsx(styles.link)}
-                          to={`/research/${project.id}`}
-                        >
-                          {`- ${project.name}`}
-                        </Link>
-                      )}
-                    </div>
-                  ))}
+                  {groupedProjects[groupName]
+                    .slice()
+                    .sort((a, b) => {
+                      if (!a.order && !b.order) return 0
+                      if (!a.order) return 1
+                      if (!b.order) return -1
+
+                      if (a.order > b.order) return -1
+                      else if (a.order < b.order) return 1
+                      else return 0
+                    })
+                    .map((project: Project) => (
+                      <div className="" key={project.id}>
+                        {project.external_link ? (
+                          <a
+                            className={clsx(styles.link)}
+                            href={project.external_link}
+                            target="_blank"
+                            rel="noreferrer"
+                          >{`- ${project.name}`}</a>
+                        ) : (
+                          <Link
+                            className={clsx(styles.link)}
+                            to={`/research/${project.id}`}
+                          >
+                            {`- ${project.name}`}
+                          </Link>
+                        )}
+                      </div>
+                    ))}
                 </div>
               </div>
             </div>

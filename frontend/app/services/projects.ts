@@ -12,6 +12,7 @@ export interface Project {
   published_at: string
   published_date: string
   tag: string
+  order?: number
 }
 
 export const getProjectsList = async () => {
